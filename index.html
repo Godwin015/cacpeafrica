@@ -35,12 +35,12 @@
                 text-align: justify;
             }
             .contact-card {
-            background-color: #edf2f7;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 250px;
-            text-align: center;
+                background-color: #edf2f7;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                width: 250px;
+                text-align: center;
             }
             .contact-card h2 {
                 font-size: 1.5rem;
@@ -67,7 +67,110 @@
                 width: 300px;
                 height:300px;
             }
-            
+            /* Dark Theme */
+            body.dark-mode {
+                background-color: #000000;
+                color: white;
+            }
+
+            /* Light Theme */
+            body:not(.dark-mode) {
+                background-color: #fff;
+                color: black;
+            }
+
+            /* Floating Button Container */
+            .theme-toggle-btn {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 50%;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            /* Button Hover Effect */
+            .theme-toggle-btn:hover {
+                background-color: #f0f0f0;
+                transform: scale(1.1);
+            }
+
+            /* Switch Wrapper */
+            .toggle-switch {
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 25px;
+            }
+
+            /* Hide Default Checkbox */
+            .toggle-switch input {
+                display: none;
+            }
+
+            /* Slider Background */
+            .slider {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                transition: 0.4s;
+                border-radius: 25px;
+            }
+
+            /* When Checked */
+            .toggle-switch input:checked + .slider {
+                background-color: #007bff;
+            }
+
+            /* Slider Circle */
+            .slider:before {
+                content: '';
+                position: absolute;
+                height: 18px;
+                width: 18px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                transition: 0.4s;
+                border-radius: 50%;
+            }
+
+            /* Move Circle When Checked */
+            .toggle-switch input:checked + .slider:before {
+                transform: translateX(25px);
+            }
+
+            /* Icon Styling */
+            .theme-icon {
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                right: 70px; /* Adjust to align next to the button */
+                transform: translateY(-50%);
+                transition: color 0.3s ease;
+            }
+
+            /* Light Mode Icon (Default) */
+            body:not(.dark-mode) .theme-icon {
+                color: #f39c12; /* Yellow for light mode */
+            }
+
+            /* Dark Mode Icon */
+            body.dark-mode .theme-icon {
+                color: #ff1e1e; /* Red for dark mode */
+            }
+
         </style>
     </head>
 
@@ -101,9 +204,9 @@
                         <a href="#contacts" class="nav-item nav-link">Volunteer</a>
                         <a href="#contacts" class="nav-item nav-link">Contact Us</a>
                     </div>
-                    
-                    
+                                                 
                 </div>
+                
             </nav>
         </div>
         <!-- Navbar & Hero End -->
@@ -652,6 +755,17 @@
                         <h1 class="display-5 mb-4">For Donations or Volunteering Contact Us @</h1>
                                
                     </div>
+                    <center>
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.3956694947256!2d8.508287074823562!3d11.947084188281949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae8100551fda27%3A0x27847e890d62e41f!2sCACPE-%20Civil%20Alliance%20for%20Climate%20Protection%20and%20Education!5e0!3m2!1sen!2sng!4v1737958679754!5m2!1sen!2sng" 
+                    width="350" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </center>
                     
                 </div>
             </div>
@@ -682,8 +796,10 @@
                             <a href=""><i class="fas fa-phone me-2"></i> +2347031697077</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-secondary me-2"></i>
-                                <a class="btn mx-1" href="https://web.facebook.com/people/Civil-Alliance-for-Climate-Protection-and-Education-CACPE/100063861288696/"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn mx-1" href="https://ng.linkedin.com/company/civil-alliance-for-climate-protection-and-education-cacpe"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -742,9 +858,17 @@
         <!-- Copyright End -->
 
 
-        <!-- Back to Top -->
+        <!-- 
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
+        Back to Top -->
+        <div class="theme-toggle-btn">
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-switcher">
+                <span class="slider"></span>
+            </label>
+            <span class="theme-icon">🌞</span>
+        </div>
+        
         
         <!-- JavaScript Libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -758,6 +882,32 @@
 
         <!-- Template Javascript -->
         <script src="main.js"></script>
+        <script>// Select elements
+            const themeSwitcher = document.getElementById('theme-switcher');
+            const body = document.body;
+            const themeIcon = document.querySelector('.theme-icon');
+
+            // Function to update the icon
+            const updateIcon = () => {
+                themeIcon.textContent = body.classList.contains('dark-mode') ? '🌙' : '🌞';
+            };
+
+            // Check for saved theme preference and apply
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+                themeSwitcher.checked = true;
+                updateIcon();
+            }
+
+            // Toggle theme and update icon
+            themeSwitcher.addEventListener('change', () => {
+                body.classList.toggle('dark-mode');
+                updateIcon();
+                // Save preference
+                localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+            });
+        </script>
+
     
 
 </html>
