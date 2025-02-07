@@ -1,432 +1,410 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>CACPE - Civil Alliance for Climate Protection and Education</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta name="description" content="Join CACPE in advocating for climate protection! Our initiatives promote eco-friendly practices and raise awareness to combat climate change through education and global cooperation.">
+        <head>
+            <meta charset="utf-8">
+            <title>CACPE - Civil Alliance for Climate Protection and Education</title>
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <meta content="" name="keywords">
+            <meta name="description" content="Join CACPE in advocating for climate protection! Our initiatives promote eco-friendly practices and raise awareness to combat climate change through education and global cooperation.">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+            <!-- Google Web Fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+            <!-- Icon Font Stylesheet -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="animate.min.css" rel="stylesheet">
-        <link href="owl.carousel.min.css" rel="stylesheet">
+            <!-- Libraries Stylesheet -->
+            <link href="animate.min.css" rel="stylesheet">
+            <link href="owl.carousel.min.css" rel="stylesheet">
 
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="bootstrap.min.css" rel="stylesheet">
+            <!-- Customized Bootstrap Stylesheet -->
+            <link href="bootstrap.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="style.css" rel="stylesheet">
-        <style>
-            .teamImg {  
-                height: 200px;
-            }
-            .about_cacpe {
-                text-align: justify;
-            }
-            .contact-card {
-                background-color: #edf2f7;
-                border-radius: 12px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                width: 250px;
-                text-align: center;
-            }
-            .contact-card h2 {
-                font-size: 1.5rem;
-                color: #1a202c;
-                margin-bottom: 10px;
-            }
-            .contact-card p {
-                margin: 5px 0;
-                font-size: 0.8rem;
-                color: #4a5568;
-            }
-            .contact-card p.phone {
-                color: #e53e3e;
-                font-weight: bold;
-            }
-            .contact-card a {
-                color: #3182ce;
-                text-decoration: none;
-            }
-            .contact-card a:hover {
-                text-decoration: underline;
-            }
-            .project_one {
-                width: 300px;
-                height:300px;
-            }
-            /* Dark Theme */
-            body.dark-mode {
-                background-color: #000000;
-                color: white;
-            }
+            <!-- Template Stylesheet -->
+            <link href="style.css" rel="stylesheet">
+            <style>
+                .teamImg {  
+                    height: 200px;
+                }
+                .about_cacpe {
+                    text-align: justify;
+                }
+                .contact-card {
+                    background-color: #edf2f7;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    padding: 20px;
+                    width: 250px;
+                    text-align: center;
+                }
+                .contact-card h2 {
+                    font-size: 1.5rem;
+                    color: #1a202c;
+                    margin-bottom: 10px;
+                }
+                .contact-card p {
+                    margin: 5px 0;
+                    font-size: 0.8rem;
+                    color: #4a5568;
+                }
+                .contact-card p.phone {
+                    color: #e53e3e;
+                    font-weight: bold;
+                }
+                .contact-card a {
+                    color: #3182ce;
+                    text-decoration: none;
+                }
+                .contact-card a:hover {
+                    text-decoration: underline;
+                }
+                .project_one {
+                    width: 300px;
+                    height:300px;
+                }
+                /* Dark Theme */
+                body.dark-mode {
+                    background-color: #000000;
+                    color: white;
+                }
 
-            /* Light Theme */
-            body:not(.dark-mode) {
-                background-color: #fff;
-                color: black;
-            }
+                /* Light Theme */
+                body:not(.dark-mode) {
+                    background-color: #fff;
+                    color: black;
+                }
 
-            /* Floating Button Container */
-            .theme-toggle-btn {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 1000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #fff;
-                border-radius: 50%;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                width: 60px;
-                height: 60px;
-                cursor: pointer;
-                transition: background-color 0.3s ease, transform 0.3s ease;
-            }
+                /* Floating Button Container */
+                .theme-toggle-btn {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    z-index: 1000;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, transform 0.3s ease;
+                }
 
-            /* Button Hover Effect */
-            .theme-toggle-btn:hover {
-                background-color: #f0f0f0;
-                transform: scale(1.1);
-            }
+                /* Button Hover Effect */
+                .theme-toggle-btn:hover {
+                    background-color: #f0f0f0;
+                    transform: scale(1.1);
+                }
 
-            /* Switch Wrapper */
-            .toggle-switch {
-                position: relative;
-                display: inline-block;
-                width: 50px;
-                height: 25px;
-            }
+                /* Switch Wrapper */
+                .toggle-switch {
+                    position: relative;
+                    display: inline-block;
+                    width: 50px;
+                    height: 25px;
+                }
 
-            /* Hide Default Checkbox */
-            .toggle-switch input {
-                display: none;
-            }
+                /* Hide Default Checkbox */
+                .toggle-switch input {
+                    display: none;
+                }
 
-            /* Slider Background */
-            .slider {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #ccc;
-                transition: 0.4s;
-                border-radius: 25px;
-            }
+                /* Slider Background */
+                .slider {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ccc;
+                    transition: 0.4s;
+                    border-radius: 25px;
+                }
 
-            /* When Checked */
-            .toggle-switch input:checked + .slider {
-                background-color: #007bff;
-            }
+                /* When Checked */
+                .toggle-switch input:checked + .slider {
+                    background-color: #007bff;
+                }
 
-            /* Slider Circle */
-            .slider:before {
-                content: '';
-                position: absolute;
-                height: 18px;
-                width: 18px;
-                left: 4px;
-                bottom: 4px;
-                background-color: white;
-                transition: 0.4s;
-                border-radius: 50%;
-            }
+                /* Slider Circle */
+                .slider:before {
+                    content: '';
+                    position: absolute;
+                    height: 18px;
+                    width: 18px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: white;
+                    transition: 0.4s;
+                    border-radius: 50%;
+                }
 
-            /* Move Circle When Checked */
-            .toggle-switch input:checked + .slider:before {
-                transform: translateX(25px);
-            }
+                /* Move Circle When Checked */
+                .toggle-switch input:checked + .slider:before {
+                    transform: translateX(25px);
+                }
 
-            /* Icon Styling */
-            .theme-icon {
-                font-size: 20px;
-                position: absolute;
-                top: 50%;
-                right: 70px; /* Adjust to align next to the button */
-                transform: translateY(-50%);
-                transition: color 0.3s ease;
-            }
+                /* Icon Styling */
+                .theme-icon {
+                    font-size: 20px;
+                    position: absolute;
+                    top: 50%;
+                    right: 70px; /* Adjust to align next to the button */
+                    transform: translateY(-50%);
+                    transition: color 0.3s ease;
+                }
 
-            /* Light Mode Icon (Default) */
-            body:not(.dark-mode) .theme-icon {
-                color: #f39c12; /* Yellow for light mode */
-            }
+                /* Light Mode Icon (Default) */
+                body:not(.dark-mode) .theme-icon {
+                    color: #f39c12; /* Yellow for light mode */
+                }
 
-            /* Dark Mode Icon */
-            body.dark-mode .theme-icon {
-                color: #08d21c; /* Green for dark mode */
-            }
+                /* Dark Mode Icon */
+                body.dark-mode .theme-icon {
+                    color: #08d21c; /* Green for dark mode */
+                }
 
-            .last {
-                color: green;
-            }
+                .last {
+                    color: green;
+                }
 
-            .film {
-                position: relative;
-                width: 100%;
-                max-width: 800px;
-                margin: auto;
-                overflow: hidden;
-                border-radius: 10px;
-            }
+                .film {
+                    position: relative;
+                    width: 100%;
+                    max-width: 800px;
+                    margin: auto;
+                    overflow: hidden;
+                    border-radius: 10px;
+                }
 
-            .film video {
-                width: 100%;
-                height: auto;
-                display: block;
-            }
+                .film video {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
 
-        </style>
-    </head>
+                .volunteer {
+                    border-radius: 3px;
+                    color: #021001;
+                    border-color: #08d21c;
+                    border-style: dashed;
+                }
 
-    <body>
+            </style>
+        </head>
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
+        <body>
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="display-5 text-secondary m-0"><img src="cacpe-removebg-preview.png" class="img-fluid teamImg" alt=""> <font color="green">CACPE</font></h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <style class="green"></style>
-                        <div class="navbar-nav ms-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active"><font color="green">Home</font></a>
-                            <a href="#about" class="nav-item nav-link"><font color="green">About</font></a>
-                            <a href="#team" class="nav-item nav-link"><font color="green">Team</font></a>
-                            <a href="#projects" class="nav-item nav-link"><font color="green">Projects</font></a>
-                            <a href="#partners" class="nav-item nav-link"><font color="green">Partners</font></a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSenNHJCt9EyWTzgnU_Mzqfug9jK3BcVXkn5cvQBJuNWF5U53A/viewform?usp=header" class="nav-item nav-link"><font color="green">Volunteer</font></a>
-                            <a href="#contacts" class="nav-item nav-link"><font color="green">Contact Us</font></a>
-                        </div>
-                    </style>                                             
-                </div>
-                
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
-
-        <!-- Carousel Start -->
-        <div class="carousel-header">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="donation-1.jpg" class="img-fluid teamImg" alt="Image"> 
-                        <div class="carousel-caption">
-                            <div class="text-center p-4" style="max-width: 900px;">
-                                <h4 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Over 20 million People are displaced yearly by climate disasters</h4>
-                                <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Welcome to Civil Alliance for Climate Protection and Education!</h1>
-                                <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">At CACPE, we are dedicated to creating innovative and sustainable solutions that address Africa's Climate change challenges.  
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- Carousel End -->
-
-        
-
-        <!-- About Start -->
-        <div class="container-fluid py-5" id="about">
-            <div class="container py-5">
-                <img src="about_us.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image"><p></p>
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3"><font color="green"><b>ABOUT</b></font></h5>
-                    </div>
-                </div>
-                        <p class="mb-4" style="text-align: justify;">Climate change has become one of the major challenges of the 21st Century. The rate of unprecedented changes in our climate has adversely affected the Global community such that the theme has gained serious momentum of attention from intellectuals, decisions makers, environmental activists and donor agencies.<br> Civil Alliance for Climate Protection and Education (CACPE) is a Nigerian based Non-Profit dedicated to Climate action and Environmental Sustainability through targeted initiative in Clean energy, Climate-smart Agriculture, Advocacy, Land restoration, Waste management, Biodiversity conservation etc; we work with partners to push for impactful, scalable change. Since its inception, CACPE has reached over 9,300 individuals and planted over 7,000 trees, with 48 Staffs and 110 Volunteers across Nigeria. CACPE collaborates closely with Stakeholders like State and Federal Ministry of Environments, relevant CBOs and CSOs, including Youth and Marginalized groups, to build resilient communities capable of addressing environmental challenges. Our projects focus on Community-based solutions that are in line with global sustainability goals.</p>
-                        
-                        <!--<p class="mb-4" style="text-align: justify;"><b>ACCOUNTABILITY:</b>We hold ourselves accountable to consistently achieve our goals with thoroughness and timeliness, empowering others to follow suit and maintain the highest standards.</p>
-                        <p class="mb-4" style="text-align: justify;"><b>RESPECT:</b>We treat every team member with respect and dignity, valuing diverse perspectives and recognizing the importance of each person's contributions and expertise.</p>
-                        <p class="mb-4" style="text-align: justify;"><b>COMMUNICATION AND COLLABORATION:</b>We value open communication and believe that teamwork drives the best solutions. We respect the skills, knowledge, and experiences of all contributors, ensuring a collective effort toward our shared goals.</p>
-                        <p class="mb-4" style="text-align: justify;"><b>DECISIVENESS:</b>We are committed to making sound, timely decisions to drive projects forward with confidence and clarity, ensuring that our actions is in line with our mission and values.</p>
-                        <p class="mb-4" style="text-align: justify;"><b>INNOVATION:</b>We are always on the lookout for new ways to improve, embracing creativity and innovation in quality control, presentation, and professionalism to enhance all aspects of our work.</p>
-                        <p class="mb-4" style="text-align: justify;"><b>TEAMWORK:</b>Teamwork is at the heart of CACPE’s approach. We work collaboratively to deliver exceptional solutions, respecting the unique skills and experiences of everyone involved.</p> -->
-                    <!--</div> -->
-                    <center><p ><video class="film" src="climate.mp4" controls="controls" type="video/mp4"></p></center>
+            <!-- Spinner Start -->
+            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+                <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
                 </div>
             </div>
-        </div>
-        
+            <!-- Spinner End -->
 
-        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h5 class="sub-title text-primary px-3"><font color="green"><b>VALUES AND ETHICS</b></font></h5>
-            </div>
-        </div>
-        
-        <div class="container-fluid counter-facts py-5">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-passport"></i>
+            <!-- Navbar & Hero Start -->
+            <div class="container-fluid nav-bar p-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+                    <a href="" class="navbar-brand p-0">
+                        <h1 class="display-5 text-secondary m-0"><img src="cacpe-removebg-preview.png" class="img-fluid teamImg" alt=""> <font color="green">CACPE</font></h1>
+                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <style class="green"></style>
+                            <div class="navbar-nav ms-auto py-0">
+                                <a href="index.html" class="nav-item nav-link active"><font color="green">Home</font></a>
+                                <a href="#about" class="nav-item nav-link"><font color="green">About</font></a>
+                                <a href="#team" class="nav-item nav-link"><font color="green">Team</font></a>
+                                <a href="#projects" class="nav-item nav-link"><font color="green">Projects</font></a>
+                                <a href="#partners" class="nav-item nav-link"><font color="green">Partners</font></a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSenNHJCt9EyWTzgnU_Mzqfug9jK3BcVXkn5cvQBJuNWF5U53A/viewform?usp=header" class="nav-item nav-link"><font color="green">Volunteer</font></a>
+                                <a href="#contacts" class="nav-item nav-link"><font color="green">Contact Us</font></a>
                             </div>
-                            <div class="counter-content">
-                                <h3>ACCOUNTABILITY</h3>
-                                    <!---<div class="d-flex align-items-center justify-content-center">
-                                         <span class="counter-value" data-toggle="counter-up">31</span> 
-                                        <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;"></h4>
-                                    </div>-->
-                                    <p style="text-align: center;">We hold ourselves accountable to consistently achieve our goals with thoroughness and timeliness, empowering others to follow suit and maintain the highest standards.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>RESPECT</h3>
-                                    <!-- <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value" data-toggle="counter-up">377</span>
-                                        <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                                    </div> -->
-                                    <p style="text-align: center;">We treat every team member with respect and dignity, valuing diverse perspectives and recognizing the importance of each person's contributions and expertise.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-user-check"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>COMMUNICATION AND COLLABORATION</h3>
-                                    <!-- <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value" data-toggle="counter-up">4.9</span>
-                                        <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">K</h4>
-                                    </div> -->
-                                    <p style="text-align: center;">We value open communication and believe that teamwork drives the best solutions. We respect the skills, knowledge, and experiences of all contributors, ensuring a collective effort toward our shared goals.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>DECISIVENESS</h3>
-                                    <!-- <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value" data-toggle="counter-up">98</span>
-                                        <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
-                                    </div> -->
-                                    <p style="text-align: center;">We are committed to making sound, timely decisions to drive projects forward with confidence and clarity, ensuring that our actions is in line with our mission and <br> values.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>INNOVATION</h3>
-                                    <!-- <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value" data-toggle="counter-up">98</span>
-                                        <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
-                                    </div> -->
-                                    <p style="text-align: center;">We are always on the lookout for new ways to improve, embracing creativity and innovation in quality control, presentation, and professionalism to enhance all aspects of our work.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="counter">
-                            <div class="counter-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="counter-content">
-                                <h3>TEAMWORK</h3>
-                                    <!-- <div class="d-flex align-items-center justify-content-center">
-                                        <span class="counter-value" data-toggle="counter-up">98</span>
-                                        <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
-                                    </div> -->
-                                    <p style="text-align: center;">Teamwork is at the heart of CACPE’s approach. We work collaboratively to deliver exceptional solutions, respecting the unique skills and experiences of everyone involved.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Counter Facts End -->
-
-
-        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="sub-style">
-                <h5 class="sub-title text-primary px-3"><font color="green"><b>VISION AND MISSION</b></font></h5>
-            </div>
-        </div>   
-        
-        <div class="container-fluid service overflow-hidden pt-5" id="#">
-            <div class="container py-5">
-                <div class="row g-4">
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item">
-                                <div class="service-inner">
-                                    <!-- <div class="service-img">
-                                        <img src="empty.png" class="img-fluid w-100 rounded" alt="Image">
-                                    </div> -->
-                                    <div class="service-title">
-                                        <div class="service-title-name">
-                                            <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                                <a href="#" class="h4 text-white mb-0"><font color="green"><br><b>Our Vision</b></font></a><p style="text-align: justify;">Aspires to become a positive reference point in sustainable environment and climate resilience.</p>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                    </div> 
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="service-item">
-                                        <div class="service-inner">
-                                            <!-- <div class="service-img">
-                                                <img src="empty.png" class="img-fluid w-100 rounded" alt="Image">
-                                            </div>-->
-                                            
-                                        </div>
-                            </div>
+                        </style>                                             
                     </div>
                     
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                </nav>
+            </div>
+            <!-- Navbar & Hero End -->
+
+            <!-- Carousel Start -->
+            <div class="carousel-header">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="donation-1.jpg" class="img-fluid teamImg" alt="Image"> 
+                            <div class="carousel-caption">
+                                <div class="text-center p-4" style="max-width: 900px;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.1s">Over 20 million People are displaced yearly by climate disasters</h4>
+                                    <h1 class="display-1 text-capitalize text-white mb-3 mb-md-4 wow fadeInUp" data-wow-delay="0.3s">Welcome to Civil Alliance for Climate Protection and Education!</h1>
+                                    <p class="text-white mb-4 mb-md-5 fs-5 wow fadeInUp" data-wow-delay="0.5s">At CACPE, we are dedicated to creating innovative and sustainable solutions that address Africa's Climate change challenges.  
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Carousel End -->
+
+            
+
+            <!-- About Start -->
+            <div class="container-fluid py-5" id="about">
+                <div class="container py-5">
+                    <img src="about_us.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image"><p></p>
+                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="sub-style">
+                            <h5 class="sub-title text-primary px-3"><font color="green"><b>ABOUT</b></font></h5>
+                        </div>
+                    </div>
+                            <p class="mb-4" style="text-align: justify;">Climate change has become one of the major challenges of the 21st Century. The rate of unprecedented changes in our climate has adversely affected the Global community such that the theme has gained serious momentum of attention from intellectuals, decisions makers, environmental activists and donor agencies.<br> Civil Alliance for Climate Protection and Education (CACPE) is a Nigerian based Non-Profit dedicated to Climate action and Environmental Sustainability through targeted initiative in Clean energy, Climate-smart Agriculture, Advocacy, Land restoration, Waste management, Biodiversity conservation etc; we work with partners to push for impactful, scalable change. Since its inception, CACPE has reached over 9,300 individuals and planted over 7,000 trees, with 48 Staffs and 110 Volunteers across Nigeria. CACPE collaborates closely with Stakeholders like State and Federal Ministry of Environments, relevant CBOs and CSOs, including Youth and Marginalized groups, to build resilient communities capable of addressing environmental challenges. Our projects focus on Community-based solutions that are in line with global sustainability goals.</p>
+                            
+                            <!--<p class="mb-4" style="text-align: justify;"><b>ACCOUNTABILITY:</b>We hold ourselves accountable to consistently achieve our goals with thoroughness and timeliness, empowering others to follow suit and maintain the highest standards.</p>
+                            <p class="mb-4" style="text-align: justify;"><b>RESPECT:</b>We treat every team member with respect and dignity, valuing diverse perspectives and recognizing the importance of each person's contributions and expertise.</p>
+                            <p class="mb-4" style="text-align: justify;"><b>COMMUNICATION AND COLLABORATION:</b>We value open communication and believe that teamwork drives the best solutions. We respect the skills, knowledge, and experiences of all contributors, ensuring a collective effort toward our shared goals.</p>
+                            <p class="mb-4" style="text-align: justify;"><b>DECISIVENESS:</b>We are committed to making sound, timely decisions to drive projects forward with confidence and clarity, ensuring that our actions is in line with our mission and values.</p>
+                            <p class="mb-4" style="text-align: justify;"><b>INNOVATION:</b>We are always on the lookout for new ways to improve, embracing creativity and innovation in quality control, presentation, and professionalism to enhance all aspects of our work.</p>
+                            <p class="mb-4" style="text-align: justify;"><b>TEAMWORK:</b>Teamwork is at the heart of CACPE’s approach. We work collaboratively to deliver exceptional solutions, respecting the unique skills and experiences of everyone involved.</p> -->
+                        <!--</div> 
+                        <center><p ><video class="film" src="climate.mp4" controls="controls" type="video/mp4"></p></center>-->
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="sub-style">
+                    <h5 class="sub-title text-primary px-3"><font color="green"><b>VALUES AND ETHICS</b></font></h5>
+                </div>
+            </div>
+            
+            <div class="container-fluid counter-facts py-5">
+                <div class="container py-5">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="counter">
+                                <div class="counter-icon">
+                                    <i class="fas fa-passport"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <h3>ACCOUNTABILITY</h3>
+                                        <!---<div class="d-flex align-items-center justify-content-center">
+                                            <span class="counter-value" data-toggle="counter-up">31</span> 
+                                            <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;"></h4>
+                                        </div>-->
+                                        <p style="text-align: center;">We hold ourselves accountable to consistently achieve our goals with thoroughness and timeliness, empowering others to follow suit and maintain the highest standards.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="counter">
+                                <div class="counter-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <h3>RESPECT</h3>
+                                        <!-- <div class="d-flex align-items-center justify-content-center">
+                                            <span class="counter-value" data-toggle="counter-up">377</span>
+                                            <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
+                                        </div> -->
+                                        <p style="text-align: center;">We treat every team member with respect and dignity, valuing diverse perspectives and recognizing the importance of each person's contributions and expertise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="counter">
+                                <div class="counter-icon">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <h3>COMMUNICATION AND COLLABORATION</h3>
+                                        <!-- <div class="d-flex align-items-center justify-content-center">
+                                            <span class="counter-value" data-toggle="counter-up">4.9</span>
+                                            <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">K</h4>
+                                        </div> -->
+                                        <p style="text-align: center;">We value open communication and believe that teamwork drives the best solutions. We respect the skills, knowledge, and experiences of all contributors, ensuring a collective effort toward our shared goals.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="counter">
+                                <div class="counter-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <h3>DECISIVENESS</h3>
+                                        <!-- <div class="d-flex align-items-center justify-content-center">
+                                            <span class="counter-value" data-toggle="counter-up">98</span>
+                                            <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
+                                        </div> -->
+                                        <p style="text-align: center;">We are committed to making sound, timely decisions to drive projects forward with confidence and clarity, ensuring that our actions is in line with our mission and <br> values.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="counter">
+                                <div class="counter-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <h3>INNOVATION</h3>
+                                        <!-- <div class="d-flex align-items-center justify-content-center">
+                                            <span class="counter-value" data-toggle="counter-up">98</span>
+                                            <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
+                                        </div> -->
+                                        <p style="text-align: center;">We are always on the lookout for new ways to improve, embracing creativity and innovation in quality control, presentation, and professionalism to enhance all aspects of our work.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="counter">
+                                <div class="counter-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div class="counter-content">
+                                    <h3>TEAMWORK</h3>
+                                        <!-- <div class="d-flex align-items-center justify-content-center">
+                                            <span class="counter-value" data-toggle="counter-up">98</span>
+                                            <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">%</h4>
+                                        </div> -->
+                                        <p style="text-align: center;">Teamwork is at the heart of CACPE’s approach. We work collaboratively to deliver exceptional solutions, respecting the unique skills and experiences of everyone involved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Counter Facts End -->
+
+
+            <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="sub-style">
+                    <h5 class="sub-title text-primary px-3"><font color="green"><b>VISION AND MISSION</b></font></h5>
+                </div>
+            </div>   
+            
+            <div class="container-fluid service overflow-hidden pt-5" id="#">
+                <div class="container py-5">
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="service-item">
                                     <div class="service-inner">
                                         <!-- <div class="service-img">
@@ -435,7 +413,7 @@
                                         <div class="service-title">
                                             <div class="service-title-name">
                                                 <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                                    <a href="#" class="h4 text-white mb-0"><font color="green"><br><b>Our Mission</b></font></a><p style="text-align: justify;">To promote environmental literacy and actions, building communities with strengthened capacities on adaptation and mitigation mechanisms to climate change.</p>
+                                                    <a href="#" class="h4 text-white mb-0"><font color="green"><br><b>Our Vision</b></font></a><p style="text-align: justify;">Aspires to become a positive reference point in sustainable environment and climate resilience.</p>
                                                 </div>
                                                 
                                             </div>
@@ -443,725 +421,757 @@
                                         </div>
                                     </div>
                                 </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        
-
-
-        <div class="container-fluid features overflow-hidden py-5" id="team">
-            <div class="container">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3"><font color="green"><b>TEAM</b></font></h5>
-                    </div>
-                    <h1 class="display-5 mb-4"><font color="green">Meet our team of Professionals</font></h1>
-                    <p class="mb-0"></p>
-                </div>
-                <center>
-                    <div class="row g-4 justify-content-center text-center"></div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                                <img src="prof_melody - Copy.png" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">PROF. NKIRU THERESA MELUDU</font></h5>
-                                <p class="mb-3">CHAIRMAN BOARD OF TRUSTEES</p>
-                                <p class="mb-4" style="text-align: justify;"></p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <p class="mb-4" style="text-align: justify;">Prof. Nkiru Theresa Meludu (STA, NF, OKP) is a Professor of Food and Nutrition Security/ Agricultural Extension at Nnamdi Azikiwe university, Awka, Anambra State, Nigeria. She earned her Ph.D in 1998 and became a Professor in the year 2010 from the University of Ibadan. She served as the Head of Department (2017-2021) and Dean, Faculty of Agriculture (2021-2023). Her research focuses on Organic Agriculture, Climate Change, Gender issues, Communication for Change, and Livestock Extension. <br>She has supervised 32 MSc and 8 Ph.D. students and published over 120 research articles, book chapters and books. She is the President of the Agricultural Extension Society of Nigeria and Home Economics Professional Association of Nigeria. With International Certification including courses from the Netherlands and Ghana, a Post doctoral fellowship in Japan, and attendance at over 10 international conferences, She is a member of National and International Associations and serves on several Boards of trustees.</p>
-                
-                </center>
-
-                <div class="row g-4 justify-content-center text-center">
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="prof_rabia.png" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">PROF. RABIA SA'ID</font></h5>
-                                <p class="mb-3">VICE CHAIRMAN BOARD OF TRUSTEES</p>
-                                <p class="mb-4" style="text-align: justify;">Professor Rabia Sa’id is the Vice Chairman of CACPE’s Board of Trustees and a Professor of Atmospheric Physics at Bayero University, Kano. Specializing in Climate Change, air pollution monitoring, renewable energy, and atmospheric dynamics, she is also a Research Fellow at the Center for Renewable Energy and Sustainability Transitions (CREST). She holds a PhD, M.Sc., and B.Sc. in Physics from BUK and an M.Sc. in Environment and Development from the University of Reading, UK. A 2020 Fellow at the James Martin Center for Nonproliferation Studies, Monterey, California, she trained in nuclear nonproliferation, security, and safeguards. In 2021, she won the CRDF grant to conduct trainings on peaceful nuclear uses and build networks among women in nuclear security and nonproliferation. Her work bridges science, policy, and sustainability, making her a key figure in climate and energy research.
-                                </p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="ceo_yahuza.png" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">AMB. YAHUZA HAMBALI</font></h5>
-                                <p class="mb-3">FOUNDER/CEO</p>
-                                <p class="mb-4" style="text-align: justify;">Yahuza Hambali is a passionate climate activist, environmental advocate, and community mobilization expert, dedicated to driving sustainable solutions in Nigeria and beyond. As the Founder & CEO of the Civil Alliance for Climate Protection and Education (CACPE), he leads initiatives that promote climate action, smart agriculture, and clean energy solutions. <br>With a strong background in environmental management, Yahuza has successfully mobilized communities, empowered youth, and influenced policies to address climate change challenges. He is the current Africa Director for Climate and Environment at International Parliament for Safety, Peace and Justice, Africa. He has collaborated with national and international organizations to implement impactful projects on green economy, climate education, and renewable energy. <br>Yahuza is a skilled project manager, strategic thinker, and advocate for climate justice. His work focuses on bridging the gap between policies and grassroots action, ensuring vulnerable communities are equipped with sustainable solutions. He remains committed to fostering a resilient and eco-conscious society through innovation, advocacy, and collaboration.</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="dr_salisu.png" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">DR. SALISU DALHATU</font></h5>
-                                <p class="mb-3">BOARD MEMBER</p>
-                                <p class="mb-4" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum minus numquam obcaecati in, molestias qui repudiandae distinctio nisi fugit laboriosam, modi cupiditate nulla facilis nemo. Magnam, sed soluta obcaecati omnis laborum atque? Beatae explicabo minus aperiam incidunt odio magni numquam ducimus veritatis aliquid, accusamus vero non asperiores error vitae excepturi at eveniet provident. Eligendi voluptatum quisquam rem laborum, minus voluptate ut, pariatur incidunt nihil modi dolor iste est perspiciatis rerum aperiam eum neque illum quod corporis placeat. Saepe, quos officiis. Soluta porro reiciendis aliquam, illo, harum adipisci nam ad quis ipsam maiores dolore laudantium aspernatur assumenda voluptas nostrum laborum at aut commodi vero voluptatibus! In, enim! Reiciendis debitis autem, rerum dolores deserunt modi. Perferendis incidunt corrupti provident saepe dolore reprehenderit autem dolor. Consequatur dignissimos dolores amet dolorem atque itaque debitis illum perspiciatis iure mollitia odio, non soluta dolorum beatae suscipit distinctio repudiandae eum consectetur molestiae. Incidunt rerum ullam officia!</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="ndidi.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">PROF. MELODY NDIDI MODEBELU</font></h5>
-                                <p class="mb-3">BOARD MEMBER</p> 
-                                <p class="mb-4" style="text-align: justify;">Professor Melody Ndidi Modebelu is a distinguished academic and Researcher in Educational Leadership and Human-Resources Management. Currently, she serves as the Executive Dean of the Faculty of Science Education at Michael Okpara University of Agriculture, Umudike, Nigeria. With expertise in Educational Administration, Transformative Teaching, Pedagogy and Environmental literacy, she has published extensively in reputable journals and edited several books. <br>A dedicated mentor, she has supervised over 35 Ph.D. candidates. Professor Modebelu is an active member of numerous academic, professional, and faith-based associations, including her role as a trustee of CACPE. Her commitment to Education, Research, and Community service has positioned her as a leading voice in Sustainable development and Climate action. A native of Anambra State, her leadership continues to inspire the next generation of Educators and Researchers, driving impactful change in education and environmental sustainability.</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="container-fluid features overflow-hidden py-5" id="team">
-            <div class="container">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    
-                    <h1 class="display-5 mb-4"><font color="green">Meet Our Management Team</font></h1>
-                    <p class="mb-0"></p>
-                </div>               
-
-                <div class="row g-4 justify-content-center text-center">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="Prof_Kemal_Yildirim.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">Prof. KEMAL YİLDİRİM</font></h5>
-                                <p class="mb-3">HEAD, ADVISORY BOARD</p>
-                                <p class="mb-4" style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sequi earum corrupti maxime ipsam cum veritatis exercitationem enim eos laborum veniam cumque sint dolores, magnam fuga commodi nisi minus assumenda quo dolorum quas doloremque facilis nemo. Modi voluptatem inventore repellat voluptate repudiandae eos optio earum recusandae similique, architecto labore? Vel fuga doloremque animi possimus mollitia rerum odio dolorum non dignissimos aperiam sequi facilis ipsa illo veritatis id quasi iure minus alias quaerat, perferendis hic dolor praesentium voluptatum. Sed magnam distinctio error minima modi doloremque ullam voluptas delectus obcaecati illum ratione incidunt, reiciendis magni dicta nihil dolorum voluptatibus itaque impedit corporis nulla. Deleniti fugit quidem architecto quaerat autem? Odit dolorem voluptates nulla tempore, iste maxime, quos magni numquam aliquam neque, cum porro harum vitae vel eos.</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="Jamila_Ibrahim_Mohammad.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">JAMILA IBRAHIM MOHAMMED</font></h5>
-                                <p class="mb-3">HEAD OF ADMINISTRATION</p>
-                                <p class="mb-4" style="text-align: justify;">Jamila Ibrahim Mohammad is an accomplished administrator and community development expert with extensive experience in the private health sector at state and LGA levels. A graduate of Usmanu Danfodiyo University, Sokoto, with a degree in Applied Chemistry, she has led and managed projects in Maternal and Neonatal Child Health (MNCH), Postpartum Family Planning Services (PPFP), Youth Adolescent Focus Groups, Seasonal Malaria Chemoprevention (SMC), and Community Engagement. <br>As a results-driven leader, Jamila excels in administrative coordination, team management, and strategic planning. Her ability to streamline operations, enhance efficiency, and foster collaboration makes her an invaluable asset in organizational leadership. She is highly adaptable, detail-oriented, and committed to fostering a productive and goal-driven work environment. <br> With a passion for sustainability and climate action, Jamila integrates health, environmental resilience, and community engagement, ensuring that administrative processes align with broader development goals for lasting impact.                                    
-                                </p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="Blessing_isah.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">BLESSING TOKULAH ISAH</font></h5>
-                                <p class="mb-3">EXECUTIVE ASSISTANT</p>
-                                <p class="mb-4" style="text-align: justify;">Blessing Tokulah Isah is a highly organized and proactive professional with expertise in administration, project coordination, and strategic planning. As an Executive Assistant, she brings strong leadership, communication, and multitasking skills to support high-level decision-making and organizational efficiency. <br>She serves as the Project Manager for Revive Africa Initiative, a Non-Governmental Organization focused on impactful development, and is an advocate for positive change and good governance with the West Africa Youth Congress (WAYC). With a background in Industrial Chemistry from Bayero University, Kano (BUK), she has extensive experience in quality control and greenhouse farming. <br>She is also the Hub Manager at Spark Lab Creativity and Innovation Hub in Nigeria, she fosters innovation and community growth. Passionate about humanitarianism, Blessing dedicates her time to community service, ensuring smooth operations, stakeholder engagement, and strategic execution in every role she takes on, driving meaningful change and impact.
-                                    </p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="nimisingha.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">DR. NIMISINGHA J. AMAKAMA</font></h5>
-                                <p class="mb-3">DIRECTOR OF PROGRAMS</p> 
-                                <p class="mb-4" style="text-align: justify;">Nimisingha Amakama is an expert in Disaster and Emergency Response Management, with a strong background in environmental sustainability and climate adaptation. As the Director of Programs at CACPE, he leads strategic initiatives that drive climate action, disaster resilience, and environmental advocacy. His research expertise spans Environmental Modelling, Environmental Toxicology, Waste water Treatment, Air & Water Quality Assessment, and Climate Change Adaptation. <br>He holds a PhD in Information & Communication Sciences (Disaster & Emergency Response Management) from IMT Mines Alés, France, an MSc in Environmental Engineering from the University of Strathclyde, UK, and a B.Tech. in Chemical Engineering from Rivers State University, Nigeria. A two-time PTDF Overseas Scholarship awardee, he is currently researching Agent-Based Modelling to predict disaster response impacts in hospital emergency departments. <br>Nimisingha brings a wealth of knowledge to CACPE, advancing policies and programs that foster environmental sustainability, community resilience, and climate-conscious development.</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="Albert_G_Udoh.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">ALBERT G. UDOH</font></h5>
-                                <p class="mb-3">DIRECTOR OF PARTNERSHIPS AND RESOURCE MOBILIZATION</p> 
-                                <p class="mb-4" style="text-align: justify;">Albert G. Udoh is a business transformation strategist, serial entrepreneur, and resource mobilization expert with a background in pharmacy, corporate leadership, and strategic development. As the Director of Partnerships & Resource Mobilization at CACPE, he leverages his vast experience across healthcare, technology, environmental sciences, and renewable energy to build strong alliances that drive impactful climate action and sustainability initiatives. <br>He is the founder of the Aduek Organization, leading multiple subsidiaries in healthcare, waste management, and environmental sustainability. An international facilitator, mentor, and keynote speaker, he actively contributes to policy advocacy, stakeholder engagement, and fundraising strategies. <br>Albert is a Fellow of the National Institute of Marketing of Nigeria (FNIMN) and a member of SEPAN, CACPE, Toastmasters International, and the Pharmaceutical Society of Nigeria. An alumnus of Lagos Business School and the University of Nigeria, Nsukka, he is deeply committed to advancing environmental transformation through strategic Partnerships.</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="Abdullahi_Biri_Mohammad.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">ABDULLAHI BIRI MOHAMMAD</font></h5>
-                                <p class="mb-3">DIRECTOR OF COMMUNICATIONS AND OUTREACH</p> 
-                                <p class="mb-4" style="text-align: justify;">Abdullahi Biri Mohammed is an environmental activist, climate advocate, and communications strategist with decades of experience in forestry, conservation, and community engagement. As Director of Communications & Outreach at CACPE, he leads awareness campaigns, stakeholder engagement, and public education on climate change adaptation and environmental sustainability. <br>A civil servant with the Yobe State Ministry of Environment, Abdullahi heads the Silviculture Unit, overseeing afforestation projects, seedling distribution, and deforestation monitoring. He has led community tree-planting initiatives, including the Great Green Wall project and Agro-Climate Resilience efforts. <br>He has volunteered with INGOs, MDAs, and CBOs, coordinating climate action programs. A member of FAN, WISON, NCF, CFA, and ISTF, he holds a B.Sc in Zoology (University of Maiduguri) and a PGD in Public Health. Passionate about advocacy and Public awareness, he drives CACPE’s mission by amplifying climate education and fostering Community resilience.</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
-                        <div class="feature-item text-center p-4">
-                            <div class="mb-4">
-                                <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
-                            <img src="Blessing_isah.jpg" class="img-fluid teamImg" alt="Image">
-
-                            </div>
-                            <div class="feature-content d-flex flex-column">
-                                <h5 class="mb-3"><font color="green">RASHIDA SULAIMAN</font></h5>
-                                <p class="mb-3">FINANCE AND ACCOUNTS OFFICER</p> 
-                                <p class="mb-4" style="text-align: justify;">Rashida Sulaiman is a finance professional with expertise in accounting, financial management, and budgeting. As the Finance & Accounts Officer at CACPE, she ensures transparency, efficiency, and accountability in financial operations, supporting the organization's climate action initiatives through effective resource management. <br>She has experience working with nonprofits, corporate finance, and development projects. Rashida specializes in financial reporting, grant management, and compliance, ensuring that funds are properly allocated and utilized for maximum impact. <br>With a keen eye for detail and analytical problem-solving skills, she plays a crucial role in financial planning, donor reporting, and internal audits. Passionate about sustainability and ethical finance, she integrates financial best practices with CACPE’s mission to drive climate resilience. Her dedication to fiscal responsibility and operational efficiency strengthens the organization's ability to deliver lasting environmental impact.</p>
-                                <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
-                            </div>
-                            
-                        </div>
-                </div>
-            </div>
-        </div>
-        <!-- Features End -->
-
-        
-
-        <div class="container-fluid features overflow-hidden py-5" id="projects">
-            <div class="container">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3"><font color="green">PROJECTS</font></h5>
-                    </div>
-                    <h1 class="display-5 mb-4"><font color="green">Projects Completed</font></h1>
-                    <p class="mb-0"></p>
-                </div>
-                
-                
-                
-                <div class="container-fluid py-5" id="projects">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="awareness.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="awareness2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                        </div> 
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="service-item">
+                                            <div class="service-inner">
+                                                <!-- <div class="service-img">
+                                                    <img src="empty.png" class="img-fluid w-100 rounded" alt="Image">
+                                                </div>-->
+                                                
+                                            </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Climate Change Awareness</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering communities and schools, we inspire the next generation of environmental advocates through dynamic climate clubs and impactful workshops. Our programs equip educators, leaders, and community members with essential environmental knowledge, fostering awareness and action. By building environmental literacy, we promote sustainable practices, drive community engagement, and encourage collective efforts to address climate challenges, paving the way for a greener, more resilient future.</p>
-                                
-                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="Ramatpoly1.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="ramatpoly2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green"><font color="green"></font>Tree Planting & Refforestation</font></h5>
-                                <p class="mb-4" style="text-align: justify;">CACPE State Team teamed up with Ramat Polytechnic Student Union and Zulum Go Green organization to tackle climate change and promote environmental sustainability in Maiduguri, Borno State. We embarked on an ambitious tree planting and reforestation project, spreading awareness and inspiring action among our youth. Our impact? Over 500 trees planted, reducing carbon footprint and cleansing the air we breathe! We also empowered over 300 students and community members with knowledge on environmental conservation. Together, we're cultivating a brighter future for Nigeria - one tree, one community at a time.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="ggss_bauchi.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="gdssbauchi2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Awareness on Clean Energy</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering Our Future Leaders with Clean Energy. At CACPE, we inspire a sustainable future for Nigeria's next generation. Our State Team partnered with Government Girls Secondary Schools Bauchi. We introduced clean energy initiatives and promoted environmental stewardship. Climate change is real; collective action is necessary. We trained 200+ students and teachers on clean energy benefits. Climate change awareness and sustainable practices were emphasized. This collaboration enhanced education through sustainability. Empowering Nigerian youth to become sustainable leaders.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="ministryofenvironment1.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="ministryofenvironment2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Collaborative environmental Governance</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Fostering Environmental Sustainability in Abia State. At CACPE, we promote collaborative governance for a greener Nigeria. Our State Team engaged with the Ministry of Environment, Abia State, to advance sustainable practices. We facilitated policy advocacy and stakeholder engagement, bringing together government, private sector, and civil society. Climate action requires collective effort. We emphasized environmental conservation, solid waste management, and erosion control. This partnership enhanced environmental governance and sustainability awareness. Empowering Abia State residents to drive positive change.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="unizik1.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="unizik2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                    <img src="unizik3.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Youth Environmental Empowerment</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering Students, Restoring the Environment, CACPE partners with UNIZIK Demonstration Secondary School Awka to enhance environmental sustainability, mitigate climate change. We reclaim degraded land, promote eco-friendly practices and planted 200+ trees. We improved school landscape and biodiversity, enhanced environmental awareness and contributed to climate change mitigation, empowering Anambra's youth to drive positive change.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="katsina_college.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="katsina_college2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Climate Education Empowerment</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering Katsina Communities through Climate Education, CACPE conducted an environmental literacy workshop at Government College Katsina to enhance climate resilience through education and build capacity for sustainable practices. 200+ community members, 50+ educators, 20+ local leaders, and school staff participated. We discussed on climate change impacts and mitigation, sustainable agriculture, waste management & recycling and environmental advocacy. We enhanced environmental awareness among 300+ participants, community-led initiatives established and partnerships with local stakeholders strengthened.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="treeplanting2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                    <img src="treeplanting3.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Youth Climate Leadership</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Supporting Abia's Youth for a Greener Future. At CACPE, we're cultivating environmental stewards among Nigeria's next generation. Our Abia State Team established climate clubs at Santa Cruz Secondary School, inspiring students to become eco-leaders. We educated and empowered the youth on climate action to build capacity for sustainable practices and environmental advocacy. We trained 200+ students on climate change mitigation, established school and community climate clubs.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="researchanddata1.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Strategic Climate Partnership with American Space</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Scaling Climate Action through Strategic Partnerships. At CACPE, we're amplifying climate impact through collaborative efforts. Our Bauchi State Team forged a strategic partnership with American Space, convening key stakeholders to drive climate action. The partnership was aimed to enhance collective impact on climate mitigation and adaptation to foster synergy among stakeholders for local, national, regional, and global climate action. We engaged 50+ stakeholders in environment (ShE) sector, we facilitated workshops on climate best practices and principles, established a climate action network for knowledge sharing and developed joint initiatives for sustainable development resulted to strengthened partnerships with ShE stakeholders, enhanced capacity for climate action among stakeholders and amplified climate advocacy and awareness in Bauchi State.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="cacpe&acresal.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                    <img src="cacpe&acresal2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Celebrating Climate Collaboration</font></h5>
-                                <p class="mb-4" style="text-align: justify;">At CACPE we honour exceptional Partnership, as part of our mission, we value collaborative efforts driving climate action. Our Katsina State Team presented certificates of appreciation to ACReSAL staff, celebrating a fruitful partnership. We recognized ACReSAL's dedication to climate action, acknowledged joint initiatives' success and strengthened ties with key stakeholders. Throughout the partnership, we've successfully enhanced climate resilience in Katsina State, improved capacity building for sustainable land management and strengthened partnerships for environmental conservation.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-                                                            
-                    
-
-        <!-- Services Start -->
-        <div class="container-fluid service overflow-hidden pt-5" id="partners">
-            <div class="container py-5">
-                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3"><font color="green">Meet Our Partners</font></h5>
-                    </div>
-                    <h1 class="display-5 mb-4"><font color="green">Our Partners</font></h1>
-                    <!-- <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p> -->
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                         
-                                <div class="service-img">
-                                    <img src="partner1.png" class="img-fluid w-100 rounded" alt="Image">        
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0"><font color="white">AWIFCA</font></a>
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="service-item">
+                                        <div class="service-inner">
+                                            <!-- <div class="service-img">
+                                                <img src="empty.png" class="img-fluid w-100 rounded" alt="Image">
+                                            </div> -->
+                                            <div class="service-title">
+                                                <div class="service-title-name">
+                                                    <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                                        <a href="#" class="h4 text-white mb-0"><font color="green"><br><b>Our Mission</b></font></a><p style="text-align: justify;">To promote environmental literacy and actions, building communities with strengthened capacities on adaptation and mitigation mechanisms to climate change.</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            </div>
                                         </div>
-                                        
                                     </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="container-fluid features overflow-hidden py-5" id="team">
+                <div class="container">
+                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="sub-style">
+                            <h5 class="sub-title text-primary px-3"><font color="green"><b>TEAM</b></font></h5>
+                        </div>
+                        <h1 class="display-5 mb-4"><font color="green">Meet our team of Professionals</font></h1>
+                        <p class="mb-0"></p>
+                    </div>
+                    <center>
+                        <div class="row g-4 justify-content-center text-center"></div>
+                            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                    <img src="prof_melody - Copy.png" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">PROF. NKIRU THERESA MELUDU</font></h5>
+                                    <p class="mb-3">CHAIRMAN BOARD OF TRUSTEES</p>
+                                    <p class="mb-4" style="text-align: justify;"></p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-4" style="text-align: justify;">Prof. Nkiru Theresa Meludu (STA, NF, OKP) is a Professor of Food and Nutrition Security/ Agricultural Extension at Nnamdi Azikiwe university, Awka, Anambra State, Nigeria. She earned her Ph.D in 1998 and became a Professor in the year 2010 from the University of Ibadan. She served as the Head of Department (2017-2021) and Dean, Faculty of Agriculture (2021-2023). Her research focuses on Organic Agriculture, Climate Change, Gender issues, Communication for Change, and Livestock Extension. <br>She has supervised 32 MSc and 8 Ph.D. students and published over 120 research articles, book chapters and books. She is the President of the Agricultural Extension Society of Nigeria and Home Economics Professional Association of Nigeria. With International Certification including courses from the Netherlands and Ghana, a Post doctoral fellowship in Japan, and attendance at over 10 international conferences, She is a member of National and International Associations and serves on several Boards of trustees.</p>
+                    
+                    </center>
+
+                    <div class="row g-4 justify-content-center text-center">
+                        
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="prof_rabia.png" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">PROF. RABIA SA'ID</font></h5>
+                                    <p class="mb-3">VICE CHAIRMAN BOARD OF TRUSTEES</p>
+                                    <p class="mb-4" style="text-align: justify;">Professor Rabia Sa’id is the Vice Chairman of CACPE’s Board of Trustees and a Professor of Atmospheric Physics at Bayero University, Kano. Specializing in Climate Change, air pollution monitoring, renewable energy, and atmospheric dynamics, she is also a Research Fellow at the Center for Renewable Energy and Sustainability Transitions (CREST). She holds a PhD, M.Sc., and B.Sc. in Physics from BUK and an M.Sc. in Environment and Development from the University of Reading, UK. A 2020 Fellow at the James Martin Center for Nonproliferation Studies, Monterey, California, she trained in nuclear nonproliferation, security, and safeguards. In 2021, she won the CRDF grant to conduct trainings on peaceful nuclear uses and build networks among women in nuclear security and nonproliferation. Her work bridges science, policy, and sustainability, making her a key figure in climate and energy research.
+                                    </p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="ceo_yahuza.png" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">AMB. YAHUZA HAMBALI</font></h5>
+                                    <p class="mb-3">FOUNDER/CEO</p>
+                                    <p class="mb-4" style="text-align: justify;">Yahuza Hambali is a passionate climate activist, environmental advocate, and community mobilization expert, dedicated to driving sustainable solutions in Nigeria and beyond. As the Founder & CEO of the Civil Alliance for Climate Protection and Education (CACPE), he leads initiatives that promote climate action, smart agriculture, and clean energy solutions. <br>With a strong background in environmental management, Yahuza has successfully mobilized communities, empowered youth, and influenced policies to address climate change challenges. He is the current Africa Director for Climate and Environment at International Parliament for Safety, Peace and Justice, Africa. He has collaborated with national and international organizations to implement impactful projects on green economy, climate education, and renewable energy. <br>Yahuza is a skilled project manager, strategic thinker, and advocate for climate justice. His work focuses on bridging the gap between policies and grassroots action, ensuring vulnerable communities are equipped with sustainable solutions. He remains committed to fostering a resilient and eco-conscious society through innovation, advocacy, and collaboration.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="dr_salisu.png" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">DR. SALISU DALHATU</font></h5>
+                                    <p class="mb-3">BOARD MEMBER</p>
+                                    <p class="mb-4" style="text-align: justify;">Dr. Salisu Dalhatu is an accomplished environmental consultant with extensive experience working with local and international NGOs. Currently, he serves as the Zamfara State Deputy Coordinator for the AGILE Program, where he drives initiatives promoting sustainable development and environmental conservation. With a strong background in climate action, Dr. Dalhatu specializes in designing and implementing programs that address environmental challenges, foster community resilience, and promote green practices. <br>His expertise spans Policy advocacy, Project management, and Capacity building, making him a key contributor to climate-focused initiatives. As a member of the Board of trustees, Dr. Dalhatu brings a wealth of knowledge and a commitment to advancing sustainable solutions. His dedication to environmental stewardship and community empowerment is in line with our mission to create a greener, more sustainable future.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="ndidi.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">PROF. MELODY NDIDI MODEBELU</font></h5>
+                                    <p class="mb-3">BOARD MEMBER</p> 
+                                    <p class="mb-4" style="text-align: justify;">Professor Melody Ndidi Modebelu is a distinguished academic and Researcher in Educational Leadership and Human-Resources Management. Currently, she serves as the Executive Dean of the Faculty of Science Education at Michael Okpara University of Agriculture, Umudike, Nigeria. With expertise in Educational Administration, Transformative Teaching, Pedagogy and Environmental literacy, she has published extensively in reputable journals and edited several books. <br>A dedicated mentor, she has supervised over 35 Ph.D. candidates. Professor Modebelu is an active member of numerous academic, professional, and faith-based associations, including her role as a trustee of CACPE. Her commitment to Education, Research, and Community service has positioned her as a leading voice in Sustainable development and Climate action. A native of Anambra State, her leadership continues to inspire the next generation of Educators and Researchers, driving impactful change in education and environmental sustainability.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid features overflow-hidden py-5" id="team">
+                <div class="container">
+                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        
+                        <h1 class="display-5 mb-4"><font color="green">Meet Our Management Team</font></h1>
+                        <p class="mb-0"></p>
+                    </div>               
+
+                    <div class="row g-4 justify-content-center text-center">
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="Prof_Kemal_Yildirim.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">Prof. KEMAL YİLDİRİM</font></h5>
+                                    <p class="mb-3">HEAD, ADVISORY BOARD</p>
+                                    <p class="mb-4" style="text-align: justify;">Dr. Kemal Yildirim is a prolific scholar, author of 240 books, and a leading expert in human rights, cultural studies, and sustainable development. With dual PhDs in Comparative Politics and African Studies, and multiple post-doctorates in Human Rights, Immigration, and Latin American Studies, he brings a global perspective to climate action. Currently teaching at the European School of Law and Governance, Kosovo, he is also a Senior Researcher at Euro Med University. <br>Dr. Yildirim serves as President of the Beth Nahrain Mesopotamian Academy of Sciences and Arts and holds memberships in prestigious organizations like the Caribbean Academy of Sciences, UNESCO, and the World Society of Sustainable Energy Technologies. A film producer and polyglot, he integrates culture, education, and innovation to drive sustainable solutions. As head of the Advisory board, his expertise inspires transformative climate action and global collaboration.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="Jamila_Ibrahim_Mohammad.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">JAMILA IBRAHIM MOHAMMED</font></h5>
+                                    <p class="mb-3">HEAD OF ADMINISTRATION</p>
+                                    <p class="mb-4" style="text-align: justify;">Jamila Ibrahim Mohammad is an accomplished administrator and community development expert with extensive experience in the private health sector at state and LGA levels. A graduate of Usmanu Danfodiyo University, Sokoto, with a degree in Applied Chemistry, she has led and managed projects in Maternal and Neonatal Child Health (MNCH), Postpartum Family Planning Services (PPFP), Youth Adolescent Focus Groups, Seasonal Malaria Chemoprevention (SMC), and Community Engagement. <br>As a results-driven leader, Jamila excels in administrative coordination, team management, and strategic planning. Her ability to streamline operations, enhance efficiency, and foster collaboration makes her an invaluable asset in organizational leadership. She is highly adaptable, detail-oriented, and committed to fostering a productive and goal-driven work environment. <br> With a passion for sustainability and climate action, Jamila integrates health, environmental resilience, and community engagement, ensuring that administrative processes align with broader development goals for lasting impact.                                    
+                                    </p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="Blessing_isah.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">BLESSING TOKULAH ISAH</font></h5>
+                                    <p class="mb-3">EXECUTIVE ASSISTANT</p>
+                                    <p class="mb-4" style="text-align: justify;">Blessing Tokulah Isah is a highly organized and proactive professional with expertise in administration, project coordination, and strategic planning. As an Executive Assistant, she brings strong leadership, communication, and multitasking skills to support high-level decision-making and organizational efficiency. <br>She serves as the Project Manager for Revive Africa Initiative, a Non-Governmental Organization focused on impactful development, and is an advocate for positive change and good governance with the West Africa Youth Congress (WAYC). With a background in Industrial Chemistry from Bayero University, Kano (BUK), she has extensive experience in quality control and greenhouse farming. <br>She is also the Hub Manager at Spark Lab Creativity and Innovation Hub in Nigeria, she fosters innovation and community growth. Passionate about humanitarianism, Blessing dedicates her time to community service, ensuring smooth operations, stakeholder engagement, and strategic execution in every role she takes on, driving meaningful change and impact.
+                                        </p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="nimisingha.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">DR. NIMISINGHA J. AMAKAMA</font></h5>
+                                    <p class="mb-3">DIRECTOR OF PROGRAMS</p> 
+                                    <p class="mb-4" style="text-align: justify;">Nimisingha Amakama is an expert in Disaster and Emergency Response Management, with a strong background in environmental sustainability and climate adaptation. As the Director of Programs at CACPE, he leads strategic initiatives that drive climate action, disaster resilience, and environmental advocacy. His research expertise spans Environmental Modelling, Environmental Toxicology, Waste water Treatment, Air & Water Quality Assessment, and Climate Change Adaptation. <br>He holds a PhD in Information & Communication Sciences (Disaster & Emergency Response Management) from IMT Mines Alés, France, an MSc in Environmental Engineering from the University of Strathclyde, UK, and a B.Tech. in Chemical Engineering from Rivers State University, Nigeria. A two-time PTDF Overseas Scholarship awardee, he is currently researching Agent-Based Modelling to predict disaster response impacts in hospital emergency departments. <br>Nimisingha brings a wealth of knowledge to CACPE, advancing policies and programs that foster environmental sustainability, community resilience, and climate-conscious development.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="Albert_G_Udoh.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">ALBERT G. UDOH</font></h5>
+                                    <p class="mb-3">DIRECTOR OF PARTNERSHIPS AND RESOURCE MOBILIZATION</p> 
+                                    <p class="mb-4" style="text-align: justify;">Albert G. Udoh is a business transformation strategist, serial entrepreneur, and resource mobilization expert with a background in pharmacy, corporate leadership, and strategic development. As the Director of Partnerships & Resource Mobilization at CACPE, he leverages his vast experience across healthcare, technology, environmental sciences, and renewable energy to build strong alliances that drive impactful climate action and sustainability initiatives. <br>He is the founder of the Aduek Organization, leading multiple subsidiaries in healthcare, waste management, and environmental sustainability. An international facilitator, mentor, and keynote speaker, he actively contributes to policy advocacy, stakeholder engagement, and fundraising strategies. <br>Albert is a Fellow of the National Institute of Marketing of Nigeria (FNIMN) and a member of SEPAN, CACPE, Toastmasters International, and the Pharmaceutical Society of Nigeria. An alumnus of Lagos Business School and the University of Nigeria, Nsukka, he is deeply committed to advancing environmental transformation through strategic Partnerships.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="Abdullahi_Biri_Mohammad.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">ABDULLAHI BIRI MOHAMMAD</font></h5>
+                                    <p class="mb-3">DIRECTOR OF COMMUNICATIONS AND OUTREACH</p> 
+                                    <p class="mb-4" style="text-align: justify;">Abdullahi Biri Mohammed is an environmental activist, climate advocate, and communications strategist with decades of experience in forestry, conservation, and community engagement. As Director of Communications & Outreach at CACPE, he leads awareness campaigns, stakeholder engagement, and public education on climate change adaptation and environmental sustainability. <br>A civil servant with the Yobe State Ministry of Environment, Abdullahi heads the Silviculture Unit, overseeing afforestation projects, seedling distribution, and deforestation monitoring. He has led community tree-planting initiatives, including the Great Green Wall project and Agro-Climate Resilience efforts. <br>He has volunteered with INGOs, MDAs, and CBOs, coordinating climate action programs. A member of FAN, WISON, NCF, CFA, and ISTF, he holds a B.Sc in Zoology (University of Maiduguri) and a PGD in Public Health. Passionate about advocacy and Public awareness, he drives CACPE’s mission by amplifying climate education and fostering Community resilience.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp">
+                            <div class="feature-item text-center p-4">
+                                <div class="mb-4">
+                                    <!-- <i class="fas fa-dollar-sign fa-4x text-primary"></i> -->
+                                <img src="rashida.jpg" class="img-fluid teamImg" alt="Image">
+
+                                </div>
+                                <div class="feature-content d-flex flex-column">
+                                    <h5 class="mb-3"><font color="green">RASHIDA SULAIMAN</font></h5>
+                                    <p class="mb-3">FINANCE AND ACCOUNTS OFFICER</p> 
+                                    <p class="mb-4" style="text-align: justify;">Rashida Sulaiman is a finance professional with expertise in accounting, financial management, and budgeting. As the Finance & Accounts Officer at CACPE, she ensures transparency, efficiency, and accountability in financial operations, supporting the organization's climate action initiatives through effective resource management. <br>She has experience working with nonprofits, corporate finance, and development projects. Rashida specializes in financial reporting, grant management, and compliance, ensuring that funds are properly allocated and utilized for maximum impact. <br>With a keen eye for detail and analytical problem-solving skills, she plays a crucial role in financial planning, donor reporting, and internal audits. Passionate about sustainability and ethical finance, she integrates financial best practices with CACPE’s mission to drive climate resilience. Her dedication to fiscal responsibility and operational efficiency strengthens the organization's ability to deliver lasting environmental impact.</p>
+                                    <!-- <a class="btn btn-secondary rounded-pill" href="#">Read More<i class="fas fa-arrow-right ms-2"></i></a> -->
+                                </div>
+                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Features End -->
+
+            
+
+            <div class="container-fluid features overflow-hidden py-5" id="projects">
+                <div class="container">
+                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="sub-style">
+                            <h5 class="sub-title text-primary px-3"><font color="green">PROJECTS</font></h5>
+                        </div>
+                        <h1 class="display-5 mb-4"><font color="green">Projects Completed</font></h1>
+                        <p class="mb-0"></p>
+                    </div>
+                    
+                    
+                    
+                    <div class="container-fluid py-5" id="projects">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="awareness.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                                        <img src="awareness2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Climate Change Awareness</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">Empowering communities and schools, we inspire the next generation of environmental advocates through dynamic climate clubs and impactful workshops. Our programs equip educators, leaders, and community members with essential environmental knowledge, fostering awareness and action. By building environmental literacy, we promote sustainable practices, drive community engagement, and encourage collective efforts to address climate challenges, paving the way for a greener, more resilient future.</p>
                                     
                                 </div>
-                            
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="Ramatpoly1.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                                        <img src="ramatpoly2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green"><font color="green"></font>Tree Planting & Refforestation</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">CACPE State Team teamed up with Ramat Polytechnic Student Union and Zulum Go Green organization to tackle climate change and promote environmental sustainability in Maiduguri, Borno State. We embarked on an ambitious tree planting and reforestation project, spreading awareness and inspiring action among our youth. Our impact? Over 500 trees planted, reducing carbon footprint and cleansing the air we breathe! We also empowered over 300 students and community members with knowledge on environmental conservation. Together, we're cultivating a brighter future for Nigeria - one tree, one community at a time.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="ggss_bauchi.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                                        <img src="gdssbauchi2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Awareness on Clean Energy</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">Empowering Our Future Leaders with Clean Energy. At CACPE, we inspire a sustainable future for Nigeria's next generation. Our State Team partnered with Government Girls Secondary Schools Bauchi. We introduced clean energy initiatives and promoted environmental stewardship. Climate change is real; collective action is necessary. We trained 200+ students and teachers on clean energy benefits. Climate change awareness and sustainable practices were emphasized. This collaboration enhanced education through sustainability. Empowering Nigerian youth to become sustainable leaders.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="ministryofenvironment1.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                                        <img src="ministryofenvironment2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Collaborative environmental Governance</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">Fostering Environmental Sustainability in Abia State. At CACPE, we promote collaborative governance for a greener Nigeria. Our State Team engaged with the Ministry of Environment, Abia State, to advance sustainable practices. We facilitated policy advocacy and stakeholder engagement, bringing together government, private sector, and civil society. Climate action requires collective effort. We emphasized environmental conservation, solid waste management, and erosion control. This partnership enhanced environmental governance and sustainability awareness. Empowering Abia State residents to drive positive change.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="unizik1.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                                        <img src="unizik2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                        <img src="unizik3.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Youth Environmental Empowerment</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">Empowering Students, Restoring the Environment, CACPE partners with UNIZIK Demonstration Secondary School Awka to enhance environmental sustainability, mitigate climate change. We reclaim degraded land, promote eco-friendly practices and planted 200+ trees. We improved school landscape and biodiversity, enhanced environmental awareness and contributed to climate change mitigation, empowering Anambra's youth to drive positive change.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="katsina_college.png" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
+                                        <img src="katsina_college2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Climate Education Empowerment</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">Empowering Katsina Communities through Climate Education, CACPE conducted an environmental literacy workshop at Government College Katsina to enhance climate resilience through education and build capacity for sustainable practices. 200+ community members, 50+ educators, 20+ local leaders, and school staff participated. We discussed on climate change impacts and mitigation, sustainable agriculture, waste management & recycling and environmental advocacy. We enhanced environmental awareness among 300+ participants, community-led initiatives established and partnerships with local stakeholders strengthened.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="treeplanting2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                        <img src="treeplanting3.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Youth Climate Leadership</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">Supporting Abia's Youth for a Greener Future. At CACPE, we're cultivating environmental stewards among Nigeria's next generation. Our Abia State Team established climate clubs at Santa Cruz Secondary School, inspiring students to become eco-leaders. We educated and empowered the youth on climate action to build capacity for sustainable practices and environmental advocacy. We trained 200+ students on climate change mitigation, established school and community climate clubs.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="researchanddata1.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Strategic Climate Partnership with American Space</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">Scaling Climate Action through Strategic Partnerships. At CACPE, we're amplifying climate impact through collaborative efforts. Our Bauchi State Team forged a strategic partnership with American Space, convening key stakeholders to drive climate action. The partnership was aimed to enhance collective impact on climate mitigation and adaptation to foster synergy among stakeholders for local, national, regional, and global climate action. We engaged 50+ stakeholders in environment (ShE) sector, we facilitated workshops on climate best practices and principles, established a climate action network for knowledge sharing and developed joint initiatives for sustainable development resulted to strengthened partnerships with ShE stakeholders, enhanced capacity for climate action among stakeholders and amplified climate advocacy and awareness in Bauchi State.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid py-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+                                    <div class="bg-light rounded">
+                                        <img src="cacpe&acresal.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                        <img src="cacpe&acresal2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h5 class="sub-title pe-3"><font color="green">Celebrating Climate Collaboration</font></h5>
+                                    <p class="mb-4" style="text-align: justify;">At CACPE we honour exceptional Partnership, as part of our mission, we value collaborative efforts driving climate action. Our Katsina State Team presented certificates of appreciation to ACReSAL staff, celebrating a fruitful partnership. We recognized ACReSAL's dedication to climate action, acknowledged joint initiatives' success and strengthened ties with key stakeholders. Throughout the partnership, we've successfully enhanced climate resilience in Katsina State, improved capacity building for sustainable land management and strengthened partnerships for environmental conservation.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                                                                
+                        
+
+            <!-- Services Start -->
+            <div class="container-fluid service overflow-hidden pt-5" id="partners">
+                <div class="container py-5">
+                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="sub-style">
+                            <h5 class="sub-title text-primary px-3"><font color="green">Meet Our Partners</font></h5>
+                        </div>
+                        <h1 class="display-5 mb-4"><font color="green">Our Partners</font></h1>
+                        <!-- <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p> -->
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                             
                                     <div class="service-img">
-                                        <img src="partner2.png" class="img-fluid w-100 rounded" alt="Image">
+                                        <img src="partner1.png" class="img-fluid w-100 rounded" alt="Image">        
                                     </div>
                                     <div class="service-title">
                                         <div class="service-title-name">
                                             <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                                <a href="#" class="h4 text-white mb-0"><font color="white">RESLI</font></a>
+                                                <a href="#" class="h4 text-white mb-0"><font color="white">AWIFCA</font></a>
                                             </div>
                                             
                                         </div>
                                         
                                     </div>
                                 
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                        </div>
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                                 
                                         <div class="service-img">
-                                            <img src="partner3.png" class="img-fluid w-100 rounded" alt="Image">
+                                            <img src="partner2.png" class="img-fluid w-100 rounded" alt="Image">
                                         </div>
                                         <div class="service-title">
                                             <div class="service-title-name">
                                                 <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                                    <a href="#" class="h4 text-white mb-0"><font color="white">Grassroots to Global Sustainable Development Network</font></a>
+                                                    <a href="#" class="h4 text-white mb-0"><font color="white">RESLI</font></a>
                                                 </div>
                                                 
                                             </div>
                                             
                                         </div>
                                     
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                        </div>
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                                     
                                             <div class="service-img">
-                                                <img src="partner4.png" class="img-fluid w-100 rounded" alt="Image">
+                                                <img src="partner3.png" class="img-fluid w-100 rounded" alt="Image">
                                             </div>
                                             <div class="service-title">
                                                 <div class="service-title-name">
                                                     <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                                        <a href="#" class="h4 text-white mb-0"><font color="white">Young Advocates for a Sustainable & Inclusive Future</font></a>
+                                                        <a href="#" class="h4 text-white mb-0"><font color="white">Grassroots to Global Sustainable Development Network</font></a>
                                                     </div>
                                                     
                                                 </div>
                                                 
                                             </div>
                                         
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                        </div>
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                                         
                                                 <div class="service-img">
-                                                    <img src="partner5.png" class="img-fluid w-100 rounded" alt="Image">
+                                                    <img src="partner4.png" class="img-fluid w-100 rounded" alt="Image">
                                                 </div>
                                                 <div class="service-title">
                                                     <div class="service-title-name">
                                                         <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                                            <a href="#" class="h4 text-white mb-0"><font color="white">Green Team</font></a>
+                                                            <a href="#" class="h4 text-white mb-0"><font color="white">Young Advocates for a Sustainable & Inclusive Future</font></a>
                                                         </div>
                                                         
                                                     </div>
                                                     
                                                 </div>
                                             
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        
-                                <div class="service-img">
-                                    <img src="partner6.png" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                    <div class="service-title">
-                                        <div class="service-title-name">
-                                            <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0"><font color="white">GECCI</font></a>
+                        </div>
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                                            
+                                                    <div class="service-img">
+                                                        <img src="partner5.png" class="img-fluid w-100 rounded" alt="Image">
+                                                    </div>
+                                                    <div class="service-title">
+                                                        <div class="service-title-name">
+                                                            <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                                                <a href="#" class="h4 text-white mb-0"><font color="white">Green Team</font></a>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                
+                        </div>
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
+                            
+                                    <div class="service-img">
+                                        <img src="partner6.png" class="img-fluid w-100 rounded" alt="Image">
+                                    </div>
+                                        <div class="service-title">
+                                            <div class="service-title-name">
+                                                <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                                <a href="#" class="h4 text-white mb-0"><font color="white">GECCI</font></a>
+                                            </div>
+                                                                
                                         </div>
                                                             
                                     </div>
-                                                        
-                                </div>
+                                
+                        </div>
+                        <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
                             
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.1s">
-                        
-                                <div class="service-img">
-                                    <img src="partner7.jpg" class="img-fluid w-100 rounded" alt="Image">
-                                </div>
-                                <div class="service-title">
-                                    <div class="service-title-name">
-                                        <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
-                                            <a href="#" class="h4 text-white mb-0"><font color="white">SETimpact</font></a>
+                                    <div class="service-img">
+                                        <img src="partner7.jpg" class="img-fluid w-100 rounded" alt="Image">
+                                    </div>
+                                    <div class="service-title">
+                                        <div class="service-title-name">
+                                            <div class="bg-primary text-center rounded p-3 mx-5 mb-4">
+                                                <a href="#" class="h4 text-white mb-0"><font color="white">SETimpact</font></a>
+                                            </div>
+                                            
                                         </div>
                                         
                                     </div>
-                                    
-                                </div>
-                            
+                                
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Services End -->
-
-
-        <!-- Contact Start -->
-        <div class="container-fluid contact overflow-hidden pb-5" id="contacts">
-            <div class="container py-5">
-                <div class="office pt-5">
-                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="sub-style">
-                            <h5 class="sub-title text-primary px-3"><font color="green">Contact Us</font></h5>
-                        </div>
-                        <h1 class="display-5 mb-4"><font color="green">For Donations or Volunteering Contact Us @</font></h1>
-                               
-                    </div>
-                    <center>
-                    <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.3956694947256!2d8.508287074823562!3d11.947084188281949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae8100551fda27%3A0x27847e890d62e41f!2sCACPE-%20Civil%20Alliance%20for%20Climate%20Protection%20and%20Education!5e0!3m2!1sen!2sng!4v1737958679754!5m2!1sen!2sng" 
-                    width="350" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </center>
-                    
-                </div>
             </div>
-        </div>
-    </body>
+            
+            
+            <!-- Services End -->
 
-    
-        <center>
-            <div class="contact-card">
-                <h2><b>Kano state, Nigeria</b></h2>
-                <p class="phone"><b>+2347031697077</b></p>
-                <p><a href="mailto:cacpeheadquarters@gmail.com"><b>cacpeheadquarters@gmail.com</b></a></p>
-                <p><b>No. 4 Atiku Abubakar Street, Off Zoo Road,</b><br><b>Kano State, Nigeria.</b></p>
-            </div>
-        </center>
-        <!-- Contact End -->
-    
 
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5" style="width: fit-content;">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4"><font color="white"><b>Contact Info</b></font></h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> No. 4 Atiku Abubakar Street, Off Zoo Road, Kano State, Nigeria.</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> cacpeheadquarters@gmail.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +2347031697077</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-secondary me-2"></i>
-                                <a class="btn mx-1" href="https://web.facebook.com/people/Civil-Alliance-for-Climate-Protection-and-Education-CACPE/100063861288696/"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn mx-1" href="https://ng.linkedin.com/company/civil-alliance-for-climate-protection-and-education-cacpe"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn mx-1" href="https://www.youtube.com/@CACPE_HQ"><i class="fab fa-youtube"></i></a>
-
+            <!-- Contact Start -->
+            <div class="container-fluid contact overflow-hidden pb-5" id="contacts">
+                <div class="container py-5">
+                    <div class="office pt-5">
+                        <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="sub-style">
+                                <h5 class="sub-title text-primary px-3"><font color="green">Contact Us</font></h5>
                             </div>
+                            <h1 class="display-5 mb-4"><font color="green">For Donations or Volunteering Contact Us @</font></h1>
+                                
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4"><font color="white"><b>Opening Time</b></font></h4>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0"><font color="white"><b>Mon - Friday:</b></font></h6>
-                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0"><font color="white"><b>Saturday:</b></font></h6>
-                                <p class="text-white mb-0">10.00 am to 05.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0"><font color="white"><b>Vacation:</b></font></h6>
-                                <p class="text-white mb-0">All Sunday is our vacation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4"><font color="white"><b>Our Core Principles</b></font></h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Accountability</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Respect</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Communication</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Collaboration</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Decisiveness</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Innovation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Teamwork</a>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-        
-        <!-- Copyright Start -->
-         <div class="last">
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="https://cacpeafrica.org/" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Civil Alliance for Climate Protection and Education (CACPE)</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
+                        <center>
+                        <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.3956694947256!2d8.508287074823562!3d11.947084188281949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae8100551fda27%3A0x27847e890d62e41f!2sCACPE-%20Civil%20Alliance%20for%20Climate%20Protection%20and%20Education!5e0!3m2!1sen!2sng!4v1737958679754!5m2!1sen!2sng" 
+                        width="350" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </center>
                         
-                        Designed By <a class="border-bottom text-white" href="mailto:godwynedward015@gmail.com">Leema Web Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </body>
+
+        
+            <center>
+                <div class="contact-card">
+                    <h2><b>Kano state, Nigeria</b></h2>
+                    <p class="phone"><b>+2347031697077</b></p>
+                    <p><a href="mailto:cacpeheadquarters@gmail.com"><b>cacpeheadquarters@gmail.com</b></a></p>
+                    <p><b>No. 4 Atiku Abubakar Street, Off Zoo Road,</b><br><b>Kano State, Nigeria.</b></p>
+                </div>
+            </center><br>
+            <center><button class="volunteer"><a href="https://docs.google.com/forms/d/e/1FAIpQLSenNHJCt9EyWTzgnU_Mzqfug9jK3BcVXkn5cvQBJuNWF5U53A/viewform?usp=header" class="h4 text-white mb-0"><font color="green"><b>Click here to Volunteer</b></font></a></button></center><br>
+            <!-- Contact End -->
+        
+
+            <!-- Footer Start -->
+            <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+                <div class="container py-5">
+                    <div class="row g-5" style="width: fit-content;">
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="footer-item d-flex flex-column">
+                                <h4 class="text-secondary mb-4"><font color="white"><b>Contact Info</b></font></h4>
+                                <a href=""><i class="fa fa-map-marker-alt me-2"></i> No. 4 Atiku Abubakar Street, Off Zoo Road, Kano State, Nigeria.</a>
+                                <a href=""><i class="fas fa-envelope me-2"></i> cacpeheadquarters@gmail.com</a>
+                                <a href=""><i class="fas fa-phone me-2"></i> +2347031697077</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-share fa-2x text-secondary me-2"></i>
+                                    <a class="btn mx-1" href="https://web.facebook.com/people/Civil-Alliance-for-Climate-Protection-and-Education-CACPE/100063861288696/"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn mx-1" href="https://ng.linkedin.com/company/civil-alliance-for-climate-protection-and-education-cacpe"><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn mx-1" href="https://www.youtube.com/@CACPE_HQ"><i class="fab fa-youtube"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="footer-item d-flex flex-column">
+                                <h4 class="text-secondary mb-4"><font color="white"><b>Opening Time</b></font></h4>
+                                <div class="mb-3">
+                                    <h6 class="text-muted mb-0"><font color="white"><b>Mon - Friday:</b></font></h6>
+                                    <p class="text-white mb-0">09.00 am to 07.00 pm</p>
+                                </div>
+                                <div class="mb-3">
+                                    <h6 class="text-muted mb-0"><font color="white"><b>Saturday:</b></font></h6>
+                                    <p class="text-white mb-0">10.00 am to 05.00 pm</p>
+                                </div>
+                                <div class="mb-3">
+                                    <h6 class="text-muted mb-0"><font color="white"><b>Vacation:</b></font></h6>
+                                    <p class="text-white mb-0">All Sunday is our vacation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="footer-item d-flex flex-column">
+                                <h4 class="text-secondary mb-4"><font color="white"><b>Our Core Principles</b></font></h4>
+                                <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Accountability</a>
+                                <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Respect</a>
+                                <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Communication</a>
+                                <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Collaboration</a>
+                                <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Decisiveness</a>
+                                <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Innovation</a>
+                                <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Teamwork</a>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+
+            
+            <!-- Copyright Start -->
+            <div class="last">
+            <div class="container-fluid copyright py-4">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center text-md-start mb-md-0">
+                            <span class="text-white"><a href="https://cacpeafrica.org/" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Civil Alliance for Climate Protection and Education (CACPE)</a>, All right reserved.</span>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end text-white">
+                            
+                            Designed By <a class="border-bottom text-white" href="mailto:godwynedward015@gmail.com">Leema Web Solutions</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+            
+            <!-- Copyright End -->
+
+
+            <!-- 
+            <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+            Back to Top -->
+            <div class="theme-toggle-btn">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="theme-switcher">
+                    <span class="slider"></span>
+                </label>
+                <span class="theme-icon">🌞</span>
+            </div>
+            
+            
+            <!-- JavaScript Libraries -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="wow.min.js"></script>
+            <script src="easing.min.js"></script>
+            <script src="waypoints.min.js"></script>
+            <script src="counterup.min.js"></script>
+            <script src="owl.carousel.min.js"></script>
         
-        <!-- Copyright End -->
 
+            <!-- Template Javascript -->
+            <script src="main.js"></script>
+            <script>// Select elements
+                const themeSwitcher = document.getElementById('theme-switcher');
+                const body = document.body;
+                const themeIcon = document.querySelector('.theme-icon');
 
-        <!-- 
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-        Back to Top -->
-        <div class="theme-toggle-btn">
-            <label class="toggle-switch">
-                <input type="checkbox" id="theme-switcher">
-                <span class="slider"></span>
-            </label>
-            <span class="theme-icon">🌞</span>
-        </div>
+                // Function to update the icon
+                const updateIcon = () => {
+                    themeIcon.textContent = body.classList.contains('dark-mode') ? '🌙' : '🌞';
+                };
+
+                // Check for saved theme preference and apply
+                if (localStorage.getItem('theme') === 'dark') {
+                    body.classList.add('dark-mode');
+                    themeSwitcher.checked = true;
+                    updateIcon();
+                }
+
+                // Toggle theme and update icon
+                themeSwitcher.addEventListener('change', () => {
+                    body.classList.toggle('dark-mode');
+                    updateIcon();
+                    // Save preference
+                    localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+                });
+            </script>
+
         
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="wow.min.js"></script>
-        <script src="easing.min.js"></script>
-        <script src="waypoints.min.js"></script>
-        <script src="counterup.min.js"></script>
-        <script src="owl.carousel.min.js"></script>
-    
 
-        <!-- Template Javascript -->
-        <script src="main.js"></script>
-        <script>// Select elements
-            const themeSwitcher = document.getElementById('theme-switcher');
-            const body = document.body;
-            const themeIcon = document.querySelector('.theme-icon');
-
-            // Function to update the icon
-            const updateIcon = () => {
-                themeIcon.textContent = body.classList.contains('dark-mode') ? '🌙' : '🌞';
-            };
-
-            // Check for saved theme preference and apply
-            if (localStorage.getItem('theme') === 'dark') {
-                body.classList.add('dark-mode');
-                themeSwitcher.checked = true;
-                updateIcon();
-            }
-
-            // Toggle theme and update icon
-            themeSwitcher.addEventListener('change', () => {
-                body.classList.toggle('dark-mode');
-                updateIcon();
-                // Save preference
-                localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-            });
-        </script>
-
-    
-
-</html>
+    </html>
