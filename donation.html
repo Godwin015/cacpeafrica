@@ -28,45 +28,7 @@
         <!-- Template Stylesheet -->
         <link href="style.css" rel="stylesheet">
         <style>
-            .teamImg {  
-                height: 200px;
-            }
-            .about_cacpe {
-                text-align: justify;
-            }
-            .contact-card {
-                background-color: #edf2f7;
-                border-radius: 12px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-                width: 250px;
-                text-align: center;
-            }
-            .contact-card h2 {
-                font-size: 1.5rem;
-                color: #1a202c;
-                margin-bottom: 10px;
-            }
-            .contact-card p {
-                margin: 5px 0;
-                font-size: 0.8rem;
-                color: #4a5568;
-            }
-            .contact-card p.phone {
-                color: #e53e3e;
-                font-weight: bold;
-            }
-            .contact-card a {
-                color: #3182ce;
-                text-decoration: none;
-            }
-            .contact-card a:hover {
-                text-decoration: underline;
-            }
-            .project_one {
-                width: 300px;
-                height:300px;
-            }
+            
             /* Dark Theme */
             body.dark-mode {
                 background-color: #000000;
@@ -116,41 +78,7 @@
                 display: none;
             }
 
-            /* Slider Background */
-            .slider {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #ccc;
-                transition: 0.4s;
-                border-radius: 25px;
-            }
-
-            /* When Checked */
-            .toggle-switch input:checked + .slider {
-                background-color: #007bff;
-            }
-
-            /* Slider Circle */
-            .slider:before {
-                content: '';
-                position: absolute;
-                height: 18px;
-                width: 18px;
-                left: 4px;
-                bottom: 4px;
-                background-color: white;
-                transition: 0.4s;
-                border-radius: 50%;
-            }
-
-            /* Move Circle When Checked */
-            .toggle-switch input:checked + .slider:before {
-                transform: translateX(25px);
-            }
-
+            
             /* Icon Styling */
             .theme-icon {
                 font-size: 20px;
@@ -180,90 +108,6 @@
                 color: #021001;
                 border-color: #08d21c;
                 border-style: dashed;
-            }
-
-            .partner-slider-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                max-width: 600px;
-                margin: auto;
-            }
-            .partner-slider {
-                display: flex;
-                overflow: hidden;
-                width: 100%;
-                position: relative;
-            }
-            .partner-item {
-                min-width: 100%;
-                display: none;
-                text-align: center;
-                transition: transform 0.5s ease-in-out;
-            }
-            .partner-item.active {
-                display: block;
-            }
-            .slider-btn {
-                background-color: #08d21c;
-                color: white;
-                width: 30px;
-                height: 30px;
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-                font-size: 18px;
-            }
-            .slider-btn:hover {
-                background-color: #06b318;
-            }
-
-            .executive-team-container {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
-            .executive-member {
-                text-align: center;
-                cursor: pointer;
-            }
-            .executive-member img {
-                width: 210px;
-                height: 210px;
-                border-radius: 5px;
-                transition: transform 0.3s;
-            }
-            .executive-member img:hover {
-                transform: scale(1.1);
-            }
-            .executive-details {
-                display: none;
-                text-align: center;
-                margin-top: 10px;
-                background: #f9f9f9;
-                padding: 10px;
-                border-radius: 5px;
-            }
-
-            .vision-mission-container {
-                display: flex;
-                justify-content: center;
-                gap: 30px;
-            }
-            .vision-mission-item {
-                background-color: green;
-                color: white;
-                padding: 20px;
-                border-radius: 10px;
-                text-align: center;
-                transition: transform 0.3s, background-color 0.3s;
-                width: 250px;
-                cursor: pointer;
-            }
-            .vision-mission-item:hover {
-                background-color: #045d04;
-                transform: scale(1.05);
             }
 
         </style>
@@ -330,6 +174,17 @@
                         <b>BENEFICIARY BANK:</b> ECOBANK Nigeria Limited DOMICILIARY ACCOUNT <br>
                         <b>SWIFT CODE:</b> ECOCNGLA <br>
                         <b>ACCOUNT NO:</b> 04087350 <br><br>
+
+                        <u><b>Kindly find EURO Account details for donations below:</b></u><br>
+                        <b>Bank Name:</b>Deutsche Bank <br>
+                        <b>Bank Address:</b>AG, Frankfurt AM Main Germany, Postfach 10 06 01, D-6000, Frankfurt 1 Germany<br>
+                        <b>SWIFT:</b> DEUTDEFF <br>
+                        <b>BLZ NO:</b> 50070010<br><br>
+                        <b>BENEFICIARY BANK:</b> ECOBANK Nigeria Limited DOMICILIARY ACCOUNT <br>
+                        <b>SWIFT CODE:</b> ECOCNGLA <br>
+                        <b>ACCOUNT NO:</b> 955700000 <br>
+                        <b>IBAN:</b> DE19 5007 0010 0955 7000 00 <br><br>
+
                         <u><b>Other Account Details are:</b></u><br>
                         <b>Account Name:</b> Civil Alliance for Climate Protection and Education <br>
                         <b>Bank Name:</b>Ecobank Nigeria <br>
@@ -411,18 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4"><font color="white"><b>Our Core Principles</b></font></h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Accountability</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Respect</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Communication</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Collaboration</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Decisiveness</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Innovation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Teamwork</a>
-                        </div>
-                    </div> -->
+                    
                     
                     
                 </div>
