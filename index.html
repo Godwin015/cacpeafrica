@@ -182,42 +182,133 @@
                 border-style: solid;
             }
 
-            .partner-slider-container {
+            /* Generic slider container for both sections */
+            .my-slider-container {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                max-width: 600px;
+                max-width: 600px; /* Adjust as needed */
                 margin: auto;
             }
-            .partner-slider {
+            .my-slider {
                 display: flex;
                 overflow: hidden;
                 width: 100%;
                 position: relative;
-            }
-            .partner-item {
-                min-width: 100%;
-                display: none;
-                text-align: center;
                 transition: transform 0.5s ease-in-out;
+                scroll-behavior: smooth;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
             }
-            .partner-item.active {
-                display: block;
+            .my-slider::-webkit-scrollbar {
+                display: none;
             }
-            .slider-btn {
-                background-color: #08d21c;
-                color: white;
-                width: 30px;
-                height: 30px;
-                border: none;
-                padding: 10px 20px;
+
+            .my-slide-item {
+                min-width: 100%;
+                flex: 0 0 100%; /* Each slide takes full width of the container */
+                padding: 1rem;
+                box-sizing: border-box;
+                text-align: center;
                 cursor: pointer;
-                font-size: 18px;
+                position: relative;
             }
+            /* Images within slider items */
+            .my-slide-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 0.5rem; /* Apply rounded corners to images */
+            }
+
+            /* Content overlay for click-to-reveal */
+            .my-content-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                max-height: 100%;
+                overflow-y: auto;
+                background-color: rgba(255, 255, 255, 0.95);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 2rem;
+                box-sizing: border-box;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                border-radius: 0.5rem;
+                text-align: center;
+            }
+            .my-content-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            .my-content-overlay h5 {
+                margin-bottom: 0.75rem;
+            }
+            .my-content-overlay p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                text-align: justify;
+            }
+            .my-content-overlay::-webkit-scrollbar {
+                width: 8px;
+            }
+            .my-content-overlay::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 10px;
+            }
+            .my-content-overlay::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 10px;
+            }
+            .my-content-overlay::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+
+            /* Slider navigation buttons */
+            .slider-btn {
+                background-color: rgba(6, 142, 73, 0.8);
+                color: white;
+                width: 40px; /* Slightly larger buttons */
+                height: 40px;
+                border: none;
+                padding: 0; /* Remove default padding to control size with width/height */
+                cursor: pointer;
+                font-size: 1.5rem; /* Larger arrow size */
+                transition: background-color 0.3s ease, transform 0.2s ease;
+                z-index: 10;
+                border-radius: 50%; /* Fully rounded buttons */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                position: absolute; /* Absolute positioning for prev/next buttons */
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
             .slider-btn:hover {
-                background-color: #06b318;
+                background-color: rgba(6, 142, 73, 1);
+                transform: translateY(-50%) scale(1.05);
             }
+
+            /* Specific positioning for prev/next buttons */
+            .prev-btn {
+                left: 0.5rem;
+            }
+
+            .next-btn {
+                right: 0.5rem;
+            }
+
 
             .executive-team-container {
                 display: flex;
@@ -672,187 +763,93 @@
 
         
 
-        <div class="container-fluid features overflow-hidden py-5" id="projects">
+         <div class="container-fluid service overflow-hidden pt-5" id="projects">
             <div class="container">
                 <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="sub-style">
-                        <h5 class="sub-title text-primary px-3"><font color="green">PROJECTS</font></h5>
+                        <h5 class="sub-title text-primary px-3"><font color="green">Projects</font></h5>
                     </div>
                     <h1 class="display-5 mb-4"><font color="green">Projects Completed</font></h1>
-                    <p class="mb-0"></p>
-                </div>
-                
-                
-                
-                <div class="container-fluid" id="projects">
-                    <div class="container">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="awareness.webp" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="awareness2.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Climate Change Awareness</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering communities and schools, we inspire the next generation of environmental advocates through dynamic climate clubs and impactful workshops. Our programs equip educators, leaders, and community members with essential environmental knowledge, fostering awareness and action. By building environmental literacy, we promote sustainable practices, drive community engagement, and encourage collective efforts to address climate challenges, paving the way for a greener, more resilient future.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="Ramatpoly1.webp" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="ramatpoly2.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green"><font color="green"></font>Tree Planting & Refforestation</font></h5>
-                                <p class="mb-4" style="text-align: justify;">CACPE State Team teamed up with Ramat Polytechnic Student Union and Zulum Go Green organization to tackle climate change and promote environmental sustainability in Maiduguri, Borno State. We embarked on an ambitious tree planting and reforestation project, spreading awareness and inspiring action among our youth. Our impact? Over 500 trees planted, reducing carbon footprint and cleansing the air we breathe! We also empowered over 300 students and community members with knowledge on environmental conservation. Together, we're cultivating a brighter future for Nigeria - one tree, one community at a time.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="ggss_bauchi.webp" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="gdssbauchi2.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Awareness on Clean Energy</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering Our Future Leaders with Clean Energy. At CACPE, we inspire a sustainable future for Nigeria's next generation. Our State Team partnered with Government Girls Secondary Schools Bauchi. We introduced clean energy initiatives and promoted environmental stewardship. Climate change is real; collective action is necessary. We trained 200+ students and teachers on clean energy benefits. Climate change awareness and sustainable practices were emphasized. This collaboration enhanced education through sustainability. Empowering Nigerian youth to become sustainable leaders.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="ministryofenvironment1.webp" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="ministryofenvironment2.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Collaborative environmental Governance</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Fostering Environmental Sustainability in Abia State. At CACPE, we promote collaborative governance for a greener Nigeria. Our State Team engaged with the Ministry of Environment, Abia State, to advance sustainable practices. We facilitated policy advocacy and stakeholder engagement, bringing together government, private sector, and civil society. Climate action requires collective effort. We emphasized environmental conservation, solid waste management, and erosion control. This partnership enhanced environmental governance and sustainability awareness. Empowering Abia State residents to drive positive change.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="unizik1.webp" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="unizik2.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                    <img src="unizik3.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Youth Environmental Empowerment</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering Students, Restoring the Environment, CACPE partners with UNIZIK Demonstration Secondary School Awka to enhance environmental sustainability, mitigate climate change. We reclaim degraded land, promote eco-friendly practices and planted 200+ trees. We improved school landscape and biodiversity, enhanced environmental awareness and contributed to climate change mitigation, empowering Anambra's youth to drive positive change.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="katsina_college.webp" class="img-fluid w-100" style="margin-bottom: -7px;" alt="Image">
-                                    <img src="katsina_college2.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                    <!--<img src="treeplanting2.png" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">-->
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Climate Education Empowerment</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Empowering Katsina Communities through Climate Education, CACPE conducted an environmental literacy workshop at Government College Katsina to enhance climate resilience through education and build capacity for sustainable practices. 200+ community members, 50+ educators, 20+ local leaders, and school staff participated. We discussed on climate change impacts and mitigation, sustainable agriculture, waste management & recycling and environmental advocacy. We enhanced environmental awareness among 300+ participants, community-led initiatives established and partnerships with local stakeholders strengthened.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="replacement.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                    <img src="treeplanting3.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Youth Climate Leadership</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Supporting Abia's Youth for a Greener Future. At CACPE, we're cultivating environmental stewards among Nigeria's next generation. Our Abia State Team established climate clubs at Santa Cruz Secondary School, inspiring students to become eco-leaders. We educated and empowered the youth on climate action to build capacity for sustainable practices and environmental advocacy. We trained 200+ students on climate change mitigation, established school and community climate clubs.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="researchanddata1.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Strategic Climate Partnership with American Space</font></h5>
-                                <p class="mb-4" style="text-align: justify;">Scaling Climate Action through Strategic Partnerships. At CACPE, we're amplifying climate impact through collaborative efforts. Our Bauchi State Team forged a strategic partnership with American Space, convening key stakeholders to drive climate action. The partnership was aimed to enhance collective impact on climate mitigation and adaptation to foster synergy among stakeholders for local, national, regional, and global climate action. We engaged 50+ stakeholders in environment (ShE) sector, we facilitated workshops on climate best practices and principles, established a climate action network for knowledge sharing and developed joint initiatives for sustainable development resulted to strengthened partnerships with ShE stakeholders, enhanced capacity for climate action among stakeholders and amplified climate advocacy and awareness in Bauchi State.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-fluid py-5">
-                    <div class="container py-5">
-                        <div class="row g-5">
-                            <div class="col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
-                                <div class="bg-light rounded">
-                                    <img src="cacpe&acresal.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                    <img src="cacpe&acresal2.webp" class="img-fluid w-100 border-bottom border-5 border-primary" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
-                                <h5 class="sub-title pe-3"><font color="green">Celebrating Climate Collaboration</font></h5>
-                                <p class="mb-4" style="text-align: justify;">At CACPE we honour exceptional Partnership, as part of our mission, we value collaborative efforts driving climate action. Our Katsina State Team presented certificates of appreciation to ACReSAL staff, celebrating a fruitful partnership. We recognized ACReSAL's dedication to climate action, acknowledged joint initiatives' success and strengthened ties with key stakeholders. Throughout the partnership, we've successfully enhanced climate resilience in Katsina State, improved capacity building for sustainable land management and strengthened partnerships for environmental conservation.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
         </div>
-                                                            
-                    
+        <div class="container-fluid" id="projects">
+            <div class="container">
+                <!-- Project Slider -->
+                <div class="my-slider-container">
+                    <button id="prevProject" class="slider-btn prev-btn">&#10094; </button>
+                    <div id="projectSlider" class="my-slider">
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="climate-change">
+                            <img src="awareness.webp" alt="Climate Change Awareness Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Climate Change Awareness</h5>
+                                <p class="text-gray-700 text-justify">Empowering communities and schools, we inspire the next generation of environmental advocates through dynamic climate clubs and impactful workshops. Our programs equip educators, leaders, and community members with essential environmental knowledge, fostering awareness and action. By building environmental literacy, we promote sustainable practices, drive community engagement, and encourage collective efforts to address climate challenges, paving the way for a greener, more resilient future.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="tree-planting">
+                            <img src="Ramatpoly1.webp" alt="Tree Planting & Reforestation Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Tree Planting & Reforestation</h5>
+                                <p class="text-gray-700 text-justify">CACPE State Team teamed up with Ramat Polytechnic Student Union and Zulum Go Green organization to tackle climate change and promote environmental sustainability in Maiduguri, Borno State. We embarked on an ambitious tree planting and reforestation project, spreading awareness and inspiring action among our youth. Our impact? Over 500 trees planted, reducing carbon footprint and cleansing the air we breathe! We also empowered over 300 students and community members with knowledge on environmental conservation. Together, we're cultivating a brighter future for Nigeria - one tree, one community at a time.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="clean-energy">
+                            <img src="gdssbauchi2.webp" alt="Awareness on Clean Energy Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Awareness on Clean Energy</h5>
+                                <p class="text-gray-700 text-justify">Empowering Our Future Leaders with Clean Energy. At CACPE, we inspire a sustainable future for Nigeria's next generation. Our State Team partnered with Government Girls Secondary Schools Bauchi. We introduced clean energy initiatives and promoted environmental stewardship. Climate change is real; collective action is necessary. We trained 200+ students and teachers on clean energy benefits. Climate change awareness and sustainable practices were emphasized. This collaboration enhanced education through sustainability. Empowering Nigerian youth to become sustainable leaders.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="environmental-governance">
+                            <img src="ministryofenvironment2.webp" alt="Collaborative environmental Governance Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Collaborative environmental Governance</h5>
+                                <p class="text-gray-700 text-justify">Fostering Environmental Sustainability in Abia State. At CACPE, we promote collaborative governance for a greener Nigeria. Our State Team engaged with the Ministry of Environment, Abia State, to advance sustainable practices. We facilitated policy advocacy and stakeholder engagement, bringing together government, private sector, and civil society. Climate action requires collective effort. We emphasized environmental conservation, solid waste management, and erosion control. This partnership enhanced environmental governance and sustainability awareness. Empowering Abia State residents to drive positive change.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="youth-empowerment">
+                            <img src="unizik2.webp" alt="Youth Environmental Empowerment Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Youth Environmental Empowerment</h5>
+                                <p class="text-gray-700 text-justify">Empowering Students, Restoring the Environment, CACPE partners with UNIZIK Demonstration Secondary School Awka to enhance environmental sustainability, mitigate climate change. We reclaim degraded land, promote eco-friendly practices and planted 200+ trees. We improved school landscape and biodiversity, enhanced environmental awareness and contributed to climate change mitigation, empowering Anambra's youth to drive positive change.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="climate-education">
+                            <img src="katsina_college2.webp" alt="Climate Education Empowerment Project Image">
+                            <img src="katsina_college.webp" alt="Climate Education Empowerment Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Climate Education Empowerment</h5>
+                                <p class="text-gray-700 text-justify">Empowering Katsina Communities through Climate Education, CACPE conducted an environmental literacy workshop at Government College Katsina to enhance climate resilience through education and build capacity for sustainable practices. 200+ community members, 50+ educators, 20+ local leaders, and school staff participated. We discussed on climate change impacts and mitigation, sustainable agriculture, waste management & recycling and environmental advocacy. We enhanced environmental awareness among 300+ participants, community-led initiatives established and partnerships with local stakeholders strengthened.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="youth-leadership">
+                            <img src="treeplanting3.webp" alt="Youth Climate Leadership Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Youth Climate Leadership</h5>
+                                <p class="text-gray-700 text-justify">Supporting Abia's Youth for a Greener Future. At CACPE, we're cultivating environmental stewards among Nigeria's next generation. Our Abia State Team established climate clubs at Santa Cruz Secondary School, inspiring students to become eco-leaders. We educated and empowered the youth on climate action to build capacity for sustainable practices and environmental advocacy. We trained 200+ students on climate change mitigation, established school and community climate clubs.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="strategic-partnership">
+                            <img src="researchanddata1.webp" alt="Strategic Climate Partnership with American Space Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Strategic Climate Partnership with American Space</h5>
+                                <p class="text-gray-700 text-justify">Scaling Climate Action through Strategic Partnerships. At CACPE, we're amplifying climate impact through collaborative efforts. Our Bauchi State Team forged a strategic partnership with American Space, convening key stakeholders to drive climate action. The partnership was aimed to enhance collective impact on climate mitigation and adaptation to foster synergy among stakeholders for local, national, regional, and global climate action. We engaged 50+ stakeholders in environment (ShE) sector, we facilitated workshops on climate best practices and principles, established a climate action network for knowledge sharing and developed joint initiatives for sustainable development resulted to strengthened partnerships with ShE stakeholders, enhanced capacity for climate action among stakeholders and amplified climate advocacy and awareness in Bauchi State.</p>
+                            </div>
+                        </div>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative" data-project-id="climate-collaboration">
+                            <img src="cacpe&acresal.webp" alt="Celebrating Climate Collaboration Project Image">
+                            <img src="cacpe&acresal2.webp" alt="Celebrating Climate Collaboration Project Image">
+                            <div class="my-content-overlay rounded-lg text-gray-800">
+                                <h5 class="text-xl font-semibold text-green-600 mb-2">Celebrating Climate Collaboration</h5>
+                                <p class="text-gray-700 text-justify">At CACPE we honour exceptional Partnership, as part of our mission, we value collaborative efforts driving climate action. Our Katsina State Team presented certificates of appreciation to ACReSAL staff, celebrating a fruitful partnership. We recognized ACReSAL's dedication to climate action, acknowledged joint initiatives' success and strengthened ties with key stakeholders. Throughout the partnership, we've successfully enhanced climate resilience in Katsina State, improved capacity building for sustainable land management and strengthened partnerships for environmental conservation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="nextProject" class="slider-btn next-btn"> &#10095;</button>
+                </div>
+            </div>
+        </div>
 
-        
         <div class="container-fluid service overflow-hidden pt-5" id="partners">
             <div class="container">
                 <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -866,50 +863,45 @@
         </div>
         <div class="container-fluid" id="partners">
             <div class="container">
-                <div class="partner-slider-container">
-                    <button id="prevPartner" class="slider-btn">&#10094; </button>
-                    <div class="partner-slider">
-                        <div class="partner-item active">
-                            <h3><img src="partner1.png" alt="partner_1" width="220px"></h3>
+                <!-- Partner Slider (New Unique IDs) -->
+                <div class="my-slider-container">
+                    <button id="prevPartnerSlider" class="slider-btn prev-btn">&#10094; </button>
+                    <div id="partnersSlider" class="my-slider">
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative">
+                            <h3><img src="partner1.png" alt="partner_1"></h3>
                             <a href=""><p style="color: #08d21c;"><b>AWIFCA</b></p></a>
                         </div>
-                        <div class="partner-item">
-                            <h3><img src="partner2.png" alt="partner_2" width="220px"></h3>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative">
+                            <h3><img src="partner2.png" alt="partner_2"></h3>
                             <a href=""><p style="color: #08d21c;"><b>RESLI</b></p></a>
                         </div>
-                        <div class="partner-item">
-                            <h3><img src="partner3.png" alt="partner_3" width="220px"></h3>
-                            <a href=""><p style="color: #08d21c;"><b>Grassroots to Global Sustainable Development Network</b></p></a>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative">
+                            <h3><img src="partner3.png" alt="partner_3"></h3>
+                            <a><p style="color: #08d21c;"><b>Grassroots to Global Sustainable Development Network</b></p></a>
                         </div>
-                        <div class="partner-item">
-                            <h3><img src="partner4.png" alt="partner_4" width="220px"></h3>
-                            <a href=""><p style="color: #08d21c;"><b>Young Advocates for a Sustainable & Inclusive Future</b></p></a>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative">
+                            <h3><img src="partner4.png" alt="partner_4"></h3>
+                            <a><p style="color: #08d21c;"><b>Young Advocates for a Sustainable & Inclusive Future</b></p></a>
                         </div>
-                        <div class="partner-item">
-                            <h3><img src="partner5.png" alt="partner_5" width="220px"></h3>
-                            <a href=""><p style="color: #08d21c;"><b>Green Team Academy</b></p></a>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative">
+                            <h3><img src="partner5.png" alt="partner_5"></h3>
+                            <a><p style="color: #08d21c;"><b>Green Team Academy</b></p></a>
                         </div>
-                        <div class="partner-item">
-                            <h3><img src="partner6.png" alt="partner_6" width="220px"></h3>
-                            <a href=""><p style="color: #08d21c;"><b>GECCI</b></p></a>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative">
+                            <h3><img src="partner6.png" alt="partner_6"></h3>
+                            <a><p style="color: #08d21c;"><b>GECCI</b></p></a>
                         </div>
-                        <div class="partner-item">
-                            <h3><img src="partner7.jpg" alt="partner_7" width="220px"></h3>
-                            <a href=""><p style="color: #08d21c;"><b>SETimpact</b></p></a>
+                        <div class="my-slide-item rounded-lg shadow-md overflow-hidden relative">
+                            <h3><img src="partner7.jpg" alt="partner_7"></h3>
+                            <a><p style="color: #08d21c;"><b>SETimpact</b></p></a>
                         </div>
                     </div>
-                    <button id="nextPartner" class="slider-btn"> &#10095;</button>
+                    <button id="nextPartnerSlider" class="slider-btn next-btn"> &#10095;</button>
                 </div>
             </div>
         </div>
-
-        
-
-       
-        
-        
-
-
+                                                            
+                    
         <!-- Contact Start -->
         <div class="container-fluid contact overflow-hidden pb-5" id="contacts">
             <div class="container py-5">
@@ -949,14 +941,6 @@
     </body>
 
 
-    
-
-    
-    
-    
-       
-    
-
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
             <div class="container py-5">
@@ -994,20 +978,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4"><font color="white"><b>Our Core Principles</b></font></h4>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Accountability</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Respect</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Communication</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Collaboration</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Decisiveness</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Innovation</a>
-                            <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Teamwork</a>
-                        </div>
-                    </div> -->
-                    
-                    
                 </div>
             </div>
         </div>
@@ -1024,7 +994,7 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end text-white">
                         
-                        Designed By <a class="border-bottom text-white" href="mailto:godwynedward015@gmail.com">Leema Web Solutions</a>
+                        Designed By <a class="border-bottom text-white" href="https://godwin015.github.io/gaadwhin/index.html#contact">Leema Web Solutions</a>
                     </div>
                 </div>
             </div>
@@ -1058,12 +1028,13 @@
 
         <!-- Template Javascript -->
         <script src="main.js"></script>
-        <script>// Select elements
+        <script>
+            // Select elements for theme switcher
             const themeSwitcher = document.getElementById('theme-switcher');
             const body = document.body;
             const themeIcon = document.querySelector('.theme-icon');
 
-            // Function to update the icon
+            // Function to update the icon based on theme
             const updateIcon = () => {
                 themeIcon.textContent = body.classList.contains('dark-mode') ? '🌙' : '🌞';
             };
@@ -1075,39 +1046,101 @@
                 updateIcon();
             }
 
-            // Toggle theme and update icon
+            // Toggle theme and update icon on change
             themeSwitcher.addEventListener('change', () => {
                 body.classList.toggle('dark-mode');
                 updateIcon();
-                // Save preference
+                // Save preference to localStorage
                 localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-            })
+            });
             
-            document.addEventListener("DOMContentLoaded", function () {
-                let index = 0;
-                const partners = document.querySelectorAll(".partner-item");
-                const prevBtn = document.getElementById("prevPartner");
-                const nextBtn = document.getElementById("nextPartner");
-                    
-                function updateSlider() {
-                    partners.forEach((partner, i) => {
-                            partner.classList.toggle("active", i === index);
-                        });
+            // Reusable function to initialize a slider
+            function initializeSlider(sliderId, prevBtnId, nextBtnId) {
+                const slider = document.getElementById(sliderId);
+                const prevBtn = document.getElementById(prevBtnId);
+                const nextBtn = document.getElementById(nextBtnId);
+                const slides = slider ? slider.querySelectorAll('.my-slide-item') : [];
+
+                let activeSlideContent = null; // To keep track of the currently active content overlay for this slider
+
+                // Function to toggle content visibility
+                const toggleContent = (slide) => {
+                    const contentOverlay = slide.querySelector('.my-content-overlay');
+
+                    // If there's an active slide content and it's not the one just clicked, hide it
+                    if (activeSlideContent && activeSlideContent !== contentOverlay) {
+                        activeSlideContent.classList.remove('active');
+                    }
+
+                    // Toggle the 'active' class for the clicked slide's content
+                    contentOverlay.classList.toggle('active');
+
+                    // Reset scroll position to top when activated/deactivated
+                    if (contentOverlay.classList.contains('active')) {
+                        contentOverlay.scrollTop = 0; // Scroll to the top when content is revealed
+                        activeSlideContent = contentOverlay;
+                    } else {
+                        activeSlideContent = null;
+                    }
+                };
+
+                // Add click event listener to each slide in this slider
+                slides.forEach(slide => {
+                    slide.addEventListener('click', () => {
+                        toggleContent(slide);
+                    });
+                });
+
+                // Slider navigation functionality
+                if (slider && prevBtn && nextBtn) {
+                    const scrollSlider = (direction) => {
+                        const slideWidth = slides.length > 0 ? slides[0].offsetWidth : 0;
+                        const scrollAmount = slideWidth;
+
+                        if (direction === 'next') {
+                            slider.scrollLeft += scrollAmount;
+                            // Loop back to the beginning if at the end
+                            if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5) {
+                                slider.scrollLeft = 0;
+                            }
+                        } else if (direction === 'prev') {
+                            slider.scrollLeft -= scrollAmount;
+                            // Loop to the end if at the beginning
+                            if (slider.scrollLeft <= 5) {
+                                slider.scrollLeft = slider.scrollWidth;
+                            }
+                        }
+
+                        // Hide any active content when navigating slides
+                        if (activeSlideContent) {
+                            activeSlideContent.classList.remove('active');
+                            activeSlideContent = null;
+                        }
+                    };
+
+                    // Add click event listeners to the navigation buttons
+                    prevBtn.addEventListener('click', (event) => {
+                        event.stopPropagation(); // Prevent slide click event from firing
+                        scrollSlider('prev');
+                    });
+                    nextBtn.addEventListener('click', (event) => {
+                        event.stopPropagation(); // Prevent slide click event from firing
+                        scrollSlider('next');
+                    });
+                } else {
+                    console.error(`Slider elements for ${sliderId} not found.`);
                 }
-                    
-                nextBtn.addEventListener("click", function () {
-                    index = (index + 1) % partners.length;
-                    updateSlider();
-                });
-                    
-                prevBtn.addEventListener("click", function () {
-                    index = (index - 1 + partners.length) % partners.length;
-                    updateSlider();
-                });
-                    
-                    updateSlider();
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Initialize the Projects slider
+                initializeSlider('projectSlider', 'prevProject', 'nextProject');
+
+                // Initialize the Partners slider with its new unique IDs
+                initializeSlider('partnersSlider', 'prevPartnerSlider', 'nextPartnerSlider');
             });
 
+            // This function seems to be for another section (executive details) and is not related to the sliders
             function showDetails(id) {
                 document.querySelectorAll('.executive-details').forEach(detail => {
                     detail.style.display = 'none';
@@ -1115,7 +1148,4 @@
                 document.getElementById(id).style.display = 'block';
             }
         </script>
-
-    
-
-</html>
+    </html>
