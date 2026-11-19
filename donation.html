@@ -1,353 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Support CACPE's climate education, environmental awareness and community resilience initiatives.">
+    <title>Donate | CACPE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            color-scheme: light;
+            --primary: #0b6b3a;
+            --primary-dark: #064527;
+            --primary-light: #e8f3ed;
+            --accent: #d6a54a;
+            --dark: #10251a;
+            --text: #425249;
+            --surface: #ffffff;
+            --background: #f7faf8;
+            --border: rgba(16, 37, 26, 0.1);
+            --shadow: 0 15px 50px rgba(10, 40, 24, 0.08);
+        }
 
-    <head>
-        <meta charset="utf-8">
-        <title>CACPE - Civil Alliance for Climate Protection and Education</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta name="description" content="Join CACPE in advocating for climate protection! Our initiatives promote eco-friendly practices and raise awareness to combat climate change through education and global cooperation.">
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.65;
+        }
+        body.dark-mode {
+            color-scheme: dark;
+            --primary: #79d49e;
+            --primary-dark: #b1e6c6;
+            --primary-light: #183b28;
+            --dark: #eff8f2;
+            --text: #c3d4c8;
+            --surface: #14281c;
+            --background: #0c1b12;
+            --border: rgba(224, 245, 231, 0.14);
+            --shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+        }
+        a { color: inherit; text-decoration: none; }
+        button { font: inherit; }
+        img { display: block; max-width: 100%; }
+        :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+        .container { width: min(92%, 1200px); margin-inline: auto; }
+        .site-header { background: #064527; color: #fff; }
+        .navbar {
+            min-height: 86px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+        .logo img { width: 52px; height: 52px; object-fit: contain; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1; }
+        .logo-name { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.5px; }
+        .logo-tagline { margin-top: 5px; color: rgba(255,255,255,0.75); font-size: 0.62rem; letter-spacing: 0.6px; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { color: rgba(255,255,255,0.88); font-size: 0.94rem; font-weight: 500; }
+        .nav-links a:hover { color: #fff; }
+        .nav-links .nav-current { color: #10251a; background: var(--accent); padding: 11px 20px; font-weight: 700; }
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
-
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-        <!-- Libraries Stylesheet -->
-        <link href="animate.min.css" rel="stylesheet">
-        <link href="owl.carousel.min.css" rel="stylesheet">
-
-
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="bootstrap.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="style.css" rel="stylesheet">
-        <style>
-            
-            /* Dark Theme */
-            body.dark-mode {
-                background-color: #000000;
-                color: white;
-            }
-
-            /* Light Theme */
-            body:not(.dark-mode) {
-                background-color: #fff;
-                color: black;
-            }
-
-            /* Floating Button Container */
-            .theme-toggle-btn {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 1000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #fff;
-                border-radius: 50%;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                width: 60px;
-                height: 60px;
-                cursor: pointer;
-                transition: background-color 0.3s ease, transform 0.3s ease;
-            }
-
-            /* Button Hover Effect */
-            .theme-toggle-btn:hover {
-                background-color: #f0f0f0;
-                transform: scale(1.1);
-            }
-
-            /* Switch Wrapper */
-            .toggle-switch {
-                position: relative;
-                display: inline-block;
-                width: 50px;
-                height: 25px;
-            }
-
-            /* Hide Default Checkbox */
-            .toggle-switch input {
-                display: none;
-            }
-
-            
-            /* Icon Styling */
-            .theme-icon {
-                font-size: 20px;
-                position: absolute;
-                top: 50%;
-                right: 70px; /* Adjust to align next to the button */
-                transform: translateY(-50%);
-                transition: color 0.3s ease;
-            }
-
-            /* Light Mode Icon (Default) */
-            body:not(.dark-mode) .theme-icon {
-                color: #f39c12; /* Yellow for light mode */
-            }
-
-            /* Dark Mode Icon */
-            body.dark-mode .theme-icon {
-                color: #08d21c; /* Green for dark mode */
-            }
-
-            .last {
-                color: green;
-            }
-
-            .volunteer {
-                border-radius: 3px;
-                color: #021001;
-                border-color: #08d21c;
-                border-style: dashed;
-            }
-
-        </style>
-    </head>
-
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+        .hero {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            background: linear-gradient(90deg, rgba(4, 45, 25, 0.97) 0%, rgba(5, 65, 34, 0.87) 55%, rgba(5, 43, 24, 0.55) 100%), url("slide2.webp") center / cover;
+        }
+        .hero-inner { position: relative; padding: 95px 0 110px; max-width: 780px; }
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+        .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--accent); }
+        .hero .eyebrow { color: #e5bd70; }
+        h1, h2, h3 { font-family: "Playfair Display", serif; line-height: 1.2; }
+        .hero h1 { margin: 20px 0 20px; max-width: 740px; font-size: clamp(2.6rem, 5.7vw, 4.7rem); letter-spacing: -1.5px; }
+        .hero h1 span { color: #e9c57d; }
+        .hero p { max-width: 590px; margin: 0 0 30px; color: rgba(255,255,255,0.86); font-size: 1.05rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+        .button-home { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.7); }
+        .button-home:hover { background: #fff; color: #064527; }
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 13px 22px;
+            background: var(--accent);
+            color: #10251a;
+            font-weight: 700;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .button:hover { background: #e6bb69; transform: translateY(-2px); }
+        .intro { padding: 80px 0 38px; }
+        .section-heading { max-width: 720px; }
+        .section-heading h2 { margin: 14px 0 16px; color: var(--dark); font-size: clamp(2rem, 3.8vw, 3rem); }
+        .section-heading p { margin: 0; }
+        .donation-section { padding: 0 0 85px; }
+        .donation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: start; }
+        .card {
+            min-width: 0;
+            padding: 32px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .card-header { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 22px; }
+        .card-icon {
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+        .card h3 { margin: 0 0 5px; color: var(--dark); font-size: 1.35rem; }
+        .card-header p { margin: 0; font-size: 0.88rem; }
+        .details { margin: 0; }
+        .details > div { padding: 11px 0; border-top: 1px solid var(--border); }
+        .details dt { color: var(--text); font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .details dd { margin: 3px 0 0; color: var(--dark); font-size: 0.94rem; font-weight: 600; overflow-wrap: anywhere; }
+        .subheading { margin: 24px 0 10px; color: var(--primary); font: 700 0.8rem "DM Sans", sans-serif; letter-spacing: 0.6px; text-transform: uppercase; }
+        .crypto-card { grid-column: 1 / -1; }
+        .crypto-card .details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+        .notice { margin: 26px 0 0; font-size: 0.86rem; }
+        .contact-section { padding: 0 0 80px; }
+        .contact-box {
+            padding: clamp(30px, 5vw, 55px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            color: #fff;
+            background: #064527;
+        }
+        .contact-box h2 { margin: 0 0 10px; color: #fff; font-size: clamp(1.7rem, 3vw, 2.4rem); }
+        .contact-box p { max-width: 670px; margin: 0; color: rgba(255,255,255,0.8); }
+        .contact-box .button { flex-shrink: 0; }
+        .site-footer { padding: 55px 0 25px; color: rgba(255,255,255,0.75); background: #10251a; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.4fr 1fr; gap: 40px; }
+        .footer-brand { color: #fff; font: 700 1.5rem "Playfair Display", serif; }
+        .footer-description { max-width: 350px; font-size: 0.9rem; }
+        .footer-grid h2 { margin: 0 0 15px; color: #fff; font: 700 0.9rem "DM Sans", sans-serif; }
+        .footer-links { display: grid; gap: 9px; font-size: 0.88rem; }
+        .footer-links a:hover { color: #e9c57d; }
+        .footer-bottom { margin-top: 35px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.8rem; }
+        .theme-toggle {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 10;
+            min-height: 44px;
+            padding: 10px 15px;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: var(--surface);
+            color: var(--dark);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        @media (max-width: 900px) {
+            .navbar { padding: 15px 0; flex-wrap: wrap; }
+            .nav-links { width: 100%; flex-wrap: wrap; gap: 12px 20px; }
+            .nav-links .nav-current { padding: 8px 13px; }
+            .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 700px) {
+            .hero-inner { padding: 65px 0 75px; }
+            .intro { padding-top: 60px; }
+            .donation-grid, .footer-grid { grid-template-columns: 1fr; }
+            .crypto-card { grid-column: auto; }
+            .crypto-card .details { grid-template-columns: 1fr; }
+            .card { padding: 25px; }
+            .contact-box { align-items: flex-start; flex-direction: column; }
+            .footer-grid { gap: 25px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .button { transition: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="logo" href="index.html" aria-label="CACPE home">
+                <img src="logo.png" alt="">
+                <span class="logo-text">
+                    <span class="logo-name">CACPE</span>
+                    <span class="logo-tagline">CLIMATE &bull; EDUCATION &bull; ACTION</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#team">Our Team</a>
+                <a href="index.html#contact">Contact</a>
+                <a class="nav-current" href="#donation-options" aria-current="page">Donate</a>
             </div>
-        </div>
-        <!-- Spinner End -->
+        </nav>
+    </header>
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="display-5 text-secondary m-0"><img src="cacpe-removebg-preview.png" class="img-fluid teamImg" alt=""> <font color="green">CACPE</font></h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <style class="green"></style>
-                        <div class="navbar-nav ms-auto py-0">
-                            <a href="https://cacpeafrica.org/" class="nav-item nav-link active"><font color="green">Home</font></a>
-                            <a href="https://cacpeafrica.org/#about" class="nav-item nav-link"><font color="green">About</font></a>
-                            <a href="https://cacpeafrica.org/#team" class="nav-item nav-link"><font color="green">Team</font></a>
-                            <a href="https://cacpeafrica.org/#projects" class="nav-item nav-link"><font color="green">Projects</font></a>
-                            <a href="https://cacpeafrica.org/#partners" class="nav-item nav-link"><font color="green">Partners</font></a>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSenNHJCt9EyWTzgnU_Mzqfug9jK3BcVXkn5cvQBJuNWF5U53A/viewform?usp=header" class="nav-item nav-link"><font color="green">Volunteer</font></a>
-                            <a href="https://cacpeafrica.org/#contacts" class="nav-item nav-link"><font color="green">Contact Us</font></a>
-                        </div>
-                    </style>                                             
-                </div>
-                
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
-
-                
-        <!-- Contact Start -->
-        <div class="container-fluid contact overflow-hidden pb-5" id="contacts">
-            <div class="container py-5">
-                <div class="office pt-5">
-                    <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="sub-style">
-                            <h5 class="sub-title text-primary px-3"><font color="green">Donations</font></h5>
-                        </div>
-                        <h1 class="display-5 mb-4"><font color="green">Kindly find the Organization's Details below</font></h1>
-                            
-                    </div>
-                    
-                    
-                    
-                        <u><b>Kindly find USD Account details for donations below:</b></u><br>
-                        <b>Bank Name:</b>Deutsche Bank <br>
-                        <b>Bank Address:</b>Trust Company, Americas, New York, 280 Park Avenue, New York, NY 10017 <br>
-                        <b>SWIFT:</b> BKTRUS33 <br>
-                        <b>ROUTING (ABA) NO:</b> 021001033 <br><br>
-                        <b>BENEFICIARY BANK:</b> ECOBANK Nigeria Limited DOMICILIARY ACCOUNT <br>
-                        <b>SWIFT CODE:</b> ECOCNGLA <br>
-                        <b>ACCOUNT NO:</b> 04087350 <br><br>
-
-                        <u><b>Kindly find EURO Account details for donations below:</b></u><br>
-                        <b>Bank Name:</b>Deutsche Bank <br>
-                        <b>Bank Address:</b>AG, Frankfurt AM Main Germany, Postfach 10 06 01, D-6000, Frankfurt 1 Germany<br>
-                        <b>SWIFT:</b> DEUTDEFF <br>
-                        <b>BLZ NO:</b> 50070010<br><br>
-                        <b>BENEFICIARY BANK:</b> ECOBANK Nigeria Limited DOMICILIARY ACCOUNT <br>
-                        <b>SWIFT CODE:</b> ECOCNGLA <br>
-                        <b>ACCOUNT NO:</b> 955700000 <br>
-                        <b>IBAN:</b> DE19 5007 0010 0955 7000 00 <br><br>
-
-                        <u><b>Other Account Details are:</b></u><br>
-                        <b>Account Name:</b> Civil Alliance for Climate Protection and Education <br>
-                        <b>Bank Name:</b>Ecobank Nigeria <br>
-                        <b>Naira Account Number:</b> 3090240670 <br>
-                        <b>USD Account Number:</b> 3090241316 <br>
-                        <b>Euro Account Number:</b> 3090247088 <br><br>
-                        <u><b>To make donations in Cryptocurrencies, find our wallet addresses below:</b></u><br>
-                        
-                        <b>Bitcoin:</b> bc1qwdyn2t2zxzls70dpp4lsq6ufclwqgpz9r7nevk <br>
-                        <b>Ethereum:</b> 0x06EfBBe934e040963503c7E3AfB44065a7b7bF1e <br>
-                        <b>Litecoin:</b> ltc1qxwfa8jqkskcmgftpjsx3hx2kx29ag7dhqf9ud3 <br>
-                        <b>BNB: </b>0x06EfBBe934e040963503c7E3AfB44065a7b7bF1e <br>
-                        <b>USDT (Bep20): </b>0x06EfBBe934e040963503c7E3AfB44065a7b7bF1e <br>
-                        <b>Solana:</b> 51DHk3wZSyGL52eFBUV6Vb2hF1jYiUkuzWJuv3NdovQ7 <br><br>
-                        
-                        
-                        
-                        
-                        
-                        
-                        <center>Please do well to reach out to us after donating 
-                        <button class="volunteer"><a href="mailto:cacpeheadquarters@gmail.com" class="h4 text-white mb-0"><font color="green"><b>Click here to reach out</b></font></a></button></center><br>
-                        <marquee behavior="below" direction="right"><i style="color: green;">......Thanks for your generous contributions and valuable contributions</i></marquee><br>
-                        <p><button class="volunteer"><a href="https://cacpeafrica.org/" class="h4 text-white mb-0"><font color="green"><b>Go back to homepage</b></font></a></button></center></p>
-                        
-
-
-
-                   
-                    
-                </div>
-            </div>
-        </div>
-    </body>
-
-
-    
-
-    
-    
-    
-       
-    
-
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5" style="width: 100%;">
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4"><font color="white"><b>Contact Info</b></font></h4>
-                            <a href=""><i class="fas fa-envelope me-2"></i>info@cacpeafrica.org</a>                            
-                            <a href=""><i class="fas fa-envelope me-2"></i> cacpeheadquarters@gmail.com</a>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> No. 4 Atiku Abubakar Street, Off Zoo Road, Kano State, Nigeria.</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +2347031697077</a>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-share fa-2x text-secondary me-2"></i>
-                                <a class="btn mx-1" href="https://web.facebook.com/people/Civil-Alliance-for-Climate-Protection-and-Education-CACPE/100063861288696/"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn mx-1" href="https://ng.linkedin.com/company/civil-alliance-for-climate-protection-and-education-cacpe"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn mx-1" href="https://www.youtube.com/@CACPE_HQ"><i class="fab fa-youtube"></i></a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-item d-flex flex-column">
-                            <h4 class="text-secondary mb-4"><font color="white"><b>Opening Time</b></font></h4>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0"><font color="white"><b>Mon - Friday:</b></font></h6>
-                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0"><font color="white"><b>Saturday:</b></font></h6>
-                                <p class="text-white mb-0">10.00 am to 05.00 pm</p>
-                            </div>
-                            <div class="mb-3">
-                                <h6 class="text-muted mb-0"><font color="white"><b>Vacation:</b></font></h6>
-                                <p class="text-white mb-0">All Sunday is our vacation</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-        
-        <!-- Copyright Start -->
-        <div class="last">
-        <div class="container-fluid copyright py-4">
+    <main>
+        <section class="hero">
             <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="https://cacpeafrica.org/" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Civil Alliance for Climate Protection and Education (CACPE)</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-white">
-                        
-                        Designed By <a class="border-bottom text-white" href="mailto:godwynedward015@gmail.com">Leema Web Solutions</a>
+                <div class="hero-inner">
+                    <div class="eyebrow">Become part of the change</div>
+                    <h1>Your Support Can Create <span>Meaningful Change.</span></h1>
+                    <p>Together, we can support climate education, environmental awareness and community action for a more resilient future.</p>
+                    <div class="hero-actions">
+                        <a class="button" href="#donation-options">Explore donation options <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                        <a class="button button-home" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to homepage</a>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="intro" id="donation-options">
+            <div class="container section-heading">
+                <div class="eyebrow">Support our mission</div>
+                <h2>Make a Difference, Together.</h2>
+                <p>Thank you for supporting CACPE. Choose a donation method below and contact us after your contribution. Please confirm the details with CACPE before making a transfer.</p>
+            </div>
+        </section>
+
+        <section class="donation-section" aria-label="Donation account details">
+            <div class="container donation-grid">
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
+                        <div><h3>Bank Transfer</h3><p>Organization account details</p></div>
+                    </div>
+                    <dl class="details">
+                        <div><dt>Account name</dt><dd>Civil Alliance for Climate Protection and Education</dd></div>
+                        <div><dt>Bank name</dt><dd>Ecobank Nigeria</dd></div>
+                        <div><dt>Naira account number</dt><dd>3090240670</dd></div>
+                        <div><dt>USD account number</dt><dd>3090241316</dd></div>
+                        <div><dt>Euro account number</dt><dd>3090247088</dd></div>
+                    </dl>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-earth-africa" aria-hidden="true"></i></div>
+                        <div><h3>International Transfers</h3><p>Correspondent and beneficiary bank details</p></div>
+                    </div>
+                    <h4 class="subheading">USD transfers</h4>
+                    <dl class="details">
+                        <div><dt>Bank name</dt><dd>Deutsche Bank</dd></div>
+                        <div><dt>Bank address</dt><dd>Trust Company, Americas, New York, 280 Park Avenue, New York, NY 10017</dd></div>
+                        <div><dt>SWIFT</dt><dd>BKTRUS33</dd></div>
+                        <div><dt>Routing (ABA) no.</dt><dd>021001033</dd></div>
+                        <div><dt>Beneficiary bank</dt><dd>ECOBANK Nigeria Limited DOMICILIARY ACCOUNT</dd></div>
+                        <div><dt>Beneficiary bank SWIFT code</dt><dd>ECOCNGLA</dd></div>
+                        <div><dt>Account no.</dt><dd>04087350</dd></div>
+                    </dl>
+                    <h4 class="subheading">Euro transfers</h4>
+                    <dl class="details">
+                        <div><dt>Bank name</dt><dd>Deutsche Bank</dd></div>
+                        <div><dt>Bank address</dt><dd>AG, Frankfurt AM Main Germany, Postfach 10 06 01, D-6000, Frankfurt 1 Germany</dd></div>
+                        <div><dt>SWIFT</dt><dd>DEUTDEFF</dd></div>
+                        <div><dt>BLZ no.</dt><dd>50070010</dd></div>
+                        <div><dt>Beneficiary bank</dt><dd>ECOBANK Nigeria Limited DOMICILIARY ACCOUNT</dd></div>
+                        <div><dt>Beneficiary bank SWIFT code</dt><dd>ECOCNGLA</dd></div>
+                        <div><dt>Account no.</dt><dd>955700000</dd></div>
+                        <div><dt>IBAN</dt><dd>DE19 5007 0010 0955 7000 00</dd></div>
+                    </dl>
+                </article>
+
+                <article class="card crypto-card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fa-solid fa-wallet" aria-hidden="true"></i></div>
+                        <div><h3>Cryptocurrency</h3><p>Wallet addresses for cryptocurrency donations</p></div>
+                    </div>
+                    <dl class="details">
+                        <div><dt>Bitcoin</dt><dd>bc1qwdyn2t2zxzls70dpp4lsq6ufclwqgpz9r7nevk</dd></div>
+                        <div><dt>Ethereum</dt><dd>0x06EfBBe934e040963503c7E3AfB44065a7b7bF1e</dd></div>
+                        <div><dt>Litecoin</dt><dd>ltc1qxwfa8jqkskcmgftpjsx3hx2kx29ag7dhqf9ud3</dd></div>
+                        <div><dt>BNB</dt><dd>0x06EfBBe934e040963503c7E3AfB44065a7b7bF1e</dd></div>
+                        <div><dt>USDT (BEP20)</dt><dd>0x06EfBBe934e040963503c7E3AfB44065a7b7bF1e</dd></div>
+                        <div><dt>Solana</dt><dd>51DHk3wZSyGL52eFBUV6Vb2hF1jYiUkuzWJuv3NdovQ7</dd></div>
+                    </dl>
+                    <p class="notice">Please confirm the wallet address and network with CACPE before sending cryptocurrency.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-box">
+                    <div>
+                        <h2>Thank you for standing with us.</h2>
+                        <p>Have a question or made a donation? Please reach out to our team. We appreciate your support for climate action and resilient communities.</p>
+                    </div>
+                    <a class="button" href="mailto:cacpeheadquarters@gmail.com?subject=CACPE%20Donation">Contact our team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="footer-brand" href="index.html">CACPE</a>
+                    <p class="footer-description">Civil Alliance for Climate Protection and Education. Working together for climate action, education and community resilience.</p>
+                </div>
+                <div>
+                    <h2>Explore</h2>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#projects">Our Projects</a>
+                        <a href="index.html#team">Our Team</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSenNHJCt9EyWTzgnU_Mzqfug9jK3BcVXkn5cvQBJuNWF5U53A/viewform?usp=header">Volunteer</a>
+                        <a href="https://web.facebook.com/people/Civil-Alliance-for-Climate-Protection-and-Education-CACPE/100063861288696/">Facebook</a>
+                        <a href="https://ng.linkedin.com/company/civil-alliance-for-climate-protection-and-education-cacpe">LinkedIn</a>
+                        <a href="https://www.youtube.com/@CACPE_HQ">YouTube</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>Contact Us</h2>
+                    <div class="footer-links">
+                        <a href="mailto:info@cacpeafrica.org">info@cacpeafrica.org</a>
+                        <a href="mailto:cacpeheadquarters@gmail.com">cacpeheadquarters@gmail.com</a>
+                        <a href="tel:+2347031697077">+234 703 169 7077</a>
+                        <span>No. 4 Atiku Abubakar Street, Off Zoo Road, Kano State, Nigeria.</span>
+                    </div>
+                </div>
+                <div>
+                    <h2>Opening Hours</h2>
+                    <div class="footer-links">
+                        <span>Monday - Friday: 9:00 am - 7:00 pm</span>
+                        <span>Saturday: 10:00 am - 5:00 pm</span>
+                        <span>Sunday: Closed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; CACPE. All rights reserved.</div>
         </div>
-    </div>
-        
-        <!-- Copyright End -->
-
-
-        <!-- 
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
-        Back to Top -->
-        <div class="theme-toggle-btn">
-            <label class="toggle-switch">
-                <input type="checkbox" id="theme-switcher">
-                <span class="slider"></span>
-            </label>
-            <span class="theme-icon">🌞</span>
-        </div>
-        
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="wow.min.js"></script>
-        <script src="easing.min.js"></script>
-        <script src="waypoints.min.js"></script>
-        <script src="counterup.min.js"></script>
-        <script src="owl.carousel.min.js"></script>
-    
-
-        <!-- Template Javascript -->
-        <script src="main.js"></script>
-        <script>// Select elements
-            const themeSwitcher = document.getElementById('theme-switcher');
-            const body = document.body;
-            const themeIcon = document.querySelector('.theme-icon');
-
-            // Function to update the icon
-            const updateIcon = () => {
-                themeIcon.textContent = body.classList.contains('dark-mode') ? '🌙' : '🌞';
-            };
-
-            // Check for saved theme preference and apply
-            if (localStorage.getItem('theme') === 'dark') {
-                body.classList.add('dark-mode');
-                themeSwitcher.checked = true;
-                updateIcon();
-            }
-
-            // Toggle theme and update icon
-            themeSwitcher.addEventListener('change', () => {
-                body.classList.toggle('dark-mode');
-                updateIcon();
-                // Save preference
-                localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-            })
-            
-            
-            
-        </script>
-
-    
-
+    </footer>
+    <button class="theme-toggle" type="button">Dark mode</button>
+    <script src="theme.js"></script>
+</body>
 </html>
